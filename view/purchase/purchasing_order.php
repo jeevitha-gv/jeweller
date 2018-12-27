@@ -1,8 +1,3 @@
-<?php
-require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
-$metaData = new jeweller();
-$getitemdata=$metaData->getdataforitem();
-?>
 <!DOCTYPE html>
 <html>
 
@@ -143,17 +138,15 @@ $getitemdata=$metaData->getdataforitem();
                                <table id="dynamic_field" align="center">  
                                 <tr><td>Item</td><td>Quantity</td></tr>
                                     <tr>  
-                                          <td><input list="browsers" name="browser" id="item" onchange="datalist()">
-                                  <datalist id="browsers">
-                                    <?php
-                                    for($i=0;$i<count($getitemdata);$i++)
-                                    {?>
-<option value="<?php echo $getitemdata[$i]['items'];?>">
-                                   <?php }
-                                    ?>
-                                   
-                                  </datalist>
-</td> 
+                                          <td><select  name="item[]" class="form-control name_list">
+                                            <option value="Bangle">Bangle</option>
+                                            <option value="Ring">Ring</option>
+                                            <option value="chain">chain</option>
+                                            <option value="Bracelet">Bracelet</option>
+                                            <option value="Watch">Watch</option>
+                                            <option value="ear ring">ear ring</option>
+                                            <option value="Anklets">Anklets</option>
+                                          </select></td> 
                                           <td><input type="text" name="quantity[]" placeholder="Enter your Quantity" class="form-control name_list" /></td> 
                                           <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
                                           <input type="hidden" name="billnumber" placeholder="Enter your number" class="form-control name_list" id='formbillnumber' />
