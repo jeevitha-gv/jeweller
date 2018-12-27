@@ -157,23 +157,6 @@ function updaterenewaldate($eventData)
         $dbOps = new DBOperations();        
         return $dbOps->cudData($sql, 'ssss', $paramArray); 
 }
-public function updateitems($eventData)
-{
-  $sql="INSERT INTO `items` (`items`) VALUES (?)";
-   $paramArray = array(  
-       $eventData->updateitems,
-          );        
-        $dbOps = new DBOperations(); 
-        return $dbOps->cudData($sql, 's', $paramArray); 
-
-}
-
-public function getdataforitem()
-{
-  $sql='SELECT * FROM `items`';
-   $dbOps = new DBOperations();    
-    return $dbOps->fetchData($sql);
-}
 
 }
     ?>

@@ -208,12 +208,11 @@ function getinterestamount(){
 
 
 
- $(document).ready(function(){
-
+ $(document).ready(function(){  
       var i=1;  
       $('#add').click(function(){  
            i++;  
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><select  name="item[]" class="form-control name_list">for(j=0;j<4;j++){<option value="Bangle">Bangle</option>}<option value="Ring">Ring</option><option value="chain">chain</option><option value="Bracelet">Bracelet</option><option value="Watch">Watch</option><option value="ear ring">ear ring</option><option value="Anklets">Anklets</option></select></td><td><input type="text" name="quantity[]" placeholder="Enter your quantity" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><select  name="item[]" class="form-control name_list"><option value="Bangle">Bangle</option><option value="Ring">Ring</option><option value="chain">chain</option><option value="Bracelet">Bracelet</option><option value="Watch">Watch</option><option value="ear ring">ear ring</option><option value="Anklets">Anklets</option></select></td><td><input type="text" name="quantity[]" placeholder="Enter your quantity" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
       });  
       $(document).on('click', '.btn_remove', function(){  
            var button_id = $(this).attr("id");   
@@ -304,15 +303,3 @@ var totalint=rate*timeDifferenceInDays;
             });
    window.print();
         }
-function datalist()
-{
-  
-  var modelDetails={
-      'item':$('#item').val()
-    }
-      $.ajax({
-        type: "POST",
-        url: "/Jeweller/php/common/updatejewelleryitems.php",
-        data: modelDetails
-            });
-}
