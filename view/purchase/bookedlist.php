@@ -165,7 +165,7 @@ $pClosed = $manger->getdata();
     <body >
 
 
-      <div class="row" style="margin-left: 271px !important;">
+      <div class="row" style="margin-left: 256px !important;">
     <div class="clearfix" style="float: left;">   
               <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
     </div>
