@@ -4,6 +4,10 @@ $manger = new jeweller();
 $id=$_GET['id'];
 $pawndata = $manger->getpawndata($id);
 $nameofpawndetails=$manger->nameofpawndetails($id);
+$paid=$manger->paidcalculation($id);
+// print_r($paid);
+$count=count($paid);
+// echo $count;
 ?>
 <!DOCTYPE html>
 <html>
@@ -234,10 +238,48 @@ $nameofpawndetails=$manger->nameofpawndetails($id);
                             </div>          
                             </div> 
                               
-                            </div>
+                  </div>
+
                             </div>
                             </div>  
                            </div>
+ <div class="row" style="margin-left: 14px;margin-right: 14px;">
+                <div class="panel panel-default">      
+                <div class="panel-body">
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                  <div class="row" style="margin-left: 14px;margin-right: 14px;">
+
+                       
+                             <!-- <div class="col-md-12" > -->
+                             <?php for($i=0;$i<$count;$i++)
+                             {
+                              ?>
+                              <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Started Date</label><br>
+                                <input type="text" class="form-control mainheading" id="assessedvalue" value="<?php echo $paid[$i]['startdate']?>" readonly>
+                            </div>          
+                            </div> 
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Interest Paid Date</label><br>
+                                <input type="text" class="form-control mainheading" id="amontadvance" value="<?php echo $paid[$i]['enddate']?>" readonly>
+                            </div>          
+                            </div>  
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Paid Interest Amount</label><br>
+                                <input type="text" class="form-control mainheading" id="monthlyinterest" value="<?php echo $paid[$i]['monthlyinterest']?>" readonly>
+                            </div>          
+                            </div>
+                            <?php } ?>
+
+                                                            
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>                          
   
 
 

@@ -165,5 +165,13 @@ public function getDataForInterest($id)
         return $dbOps->fetchData($sql, 'i', $paramArray); 
 }
 
+public function paidcalculation($id)
+{
+   $sql="SELECT i.startdate,i.enddate,d.monthlyinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.id=?";
+    $dbOps = new DBOperations();
+    $paramArray = array($id);
+    return $dbOps->fetchData($sql, 'i', $paramArray); 
+}
+
 }
     ?>

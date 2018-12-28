@@ -302,7 +302,14 @@ function getinterestamount(){
 
 
 
- $(document).ready(function(){  
+ $(document).ready(function(){ 
+
+     $(function() {
+        $(".datepickerClass").datepicker();
+        $('.ui-datepicker').addClass('notranslate');
+    });     
+
+     
       var i=1;  
       $('#add').click(function(){  
            i++;  
@@ -311,7 +318,8 @@ function getinterestamount(){
       $(document).on('click', '.btn_remove', function(){  
            var button_id = $(this).attr("id");   
            $('#row'+button_id+'').remove();  
-      });  
+      });
+
        });
              
              function insertdata()

@@ -378,10 +378,3 @@
 
 </body>
 </html>
-<script type="text/javascript">
-     $(function() {
-        $(".datepickerClass").datepicker();
-        $('.ui-datepicker').addClass('notranslate');
-    });
-</script>    
-    
