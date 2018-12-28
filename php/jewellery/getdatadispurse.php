@@ -50,7 +50,7 @@ class jeweller{
 
     public function getdata()
     {
-      $sql='SELECT * FROM dispurse';
+      $sql='SELECT * FROM dispurse order by `id` DESC';
         $dbOps = new DBOperations();    
         return $dbOps->fetchData($sql);
     }
