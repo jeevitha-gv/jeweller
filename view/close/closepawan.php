@@ -97,7 +97,7 @@
 
          <div class="col-md-4">
                             <div class="form-group">
-                                <label for="SecurityRecommendations">End Date</label><br>
+                                <label for="SecurityRecommendations">Close Date</label><br>
                                 <input type="date" class="form-control mainheading" id="end_date" onchange="totalinterestdata()">
                             </div>          
                             </div> 

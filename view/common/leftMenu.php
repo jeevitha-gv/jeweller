@@ -17,7 +17,7 @@
                         </li> -->
                         <li class="nav-item active " id="compliancedash"  >
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <span class="title">Dispursuse</span>
+                                <span class="title">Disburse</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">

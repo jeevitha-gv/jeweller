@@ -1,6 +1,6 @@
 <?php
 include "php/common/config.php";
-            header("Location:view/purchase/purchasing_order.php");
+            header("Location:view/purchase/bookedlist.php");
 
 
 if (isset($_POST['submit'])){
@@ -8,7 +8,7 @@ if (isset($_POST['submit'])){
     $password = $_POST['password'];
     // if($email=='pawan@gmail.co')
     // {
-            header("Location:view/purchase/purchasing_order.php");
+            header("Location:view/purchase/bookedlist.php");
     // }
   }
 // require_once __DIR__.'/php/dataonboading.php';
