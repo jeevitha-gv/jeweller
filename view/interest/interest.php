@@ -83,7 +83,7 @@
                             </div> 
                          </div>
        
-                            </div>
+                            </div><br>
                             <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
@@ -96,12 +96,20 @@
                             </div>          
                             </div> 
                        
-                              <div class="col-md-4">
+                              <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Interest Date</label><br>
                                 <input type="date" class="form-control mainheading" id="end_date" onchange="totalinterestdata()">
                             </div>          
-                            </div> 
+                            </div> -->
+                            <div class="col-md-4" >
+                        <div class="form-group" style="margin-top: -2px;">
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Interest Date</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
+                        <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="Interest Date" name="from" class="" onchange="totalinterestdata()" style="width: 336px;">
+                        </div>
+                        </div>
+                        </div> 
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Total Interest</label><br>
@@ -127,5 +135,11 @@
  </div>
 </body>
 </html>
-    
+<script type="text/javascript">
+     $(function() {
+        $(".datepickerClass").datepicker();
+        $('.ui-datepicker').addClass('notranslate');
+    });
+</script>    
+        
     

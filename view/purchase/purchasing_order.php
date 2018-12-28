@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css"/>
     <link href="metronic/theme/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
     <link href="metronic/theme/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
     <script src="metronic/theme/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
     <script src="metronic/theme/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>     
     <script src="assets/multiselectDropdown/bootstrap-multiselect.js" type="text/javascript"></script>  
@@ -99,28 +100,46 @@
 
                        
                              <!-- <div class="col-md-12" > -->
-                              <div class="col-md-4">
+                            <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Driving License</label><br>
                                 <input type="text" class="form-control mainheading" id="driving_license">
                             </div>          
                             </div> 
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Date Of Birth</label><br>
                                 <input type="Date" class="form-control mainheading" id="dob">
                             </div>          
-                            </div>  
-                            <div class="col-md-4">
+                            </div> -->
+                        <div class="col-md-4" >
+                        <div class="form-group" style="margin-top: -2px;">
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Date Of Birth</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
+                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="">
+                        </div>
+                        </div>
+                        </div>
+                         <div class="col-md-4" >
+                        <div class="form-group" style="margin-top: -2px;">
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">On Date</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="">
+                        </div>
+                        </div>
+                        </div>
+              </div>
+
+                            <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">On Date</label><br>
                                 <input type="date" class="form-control mainheading" id="date">
                             </div>          
                             </div> 
-                            </div>
+                            </div> -->
 
 
-                              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 20px;">
 
                             <div class="col-md-4">
                             <div class="form-group">
@@ -128,16 +147,16 @@
                                 <input type="text" class="form-control mainheading" id="address">
                             </div>          
                             </div> 
-                               <div class="col-md-4">
+                            <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Email Id</label><br>
                                 <input type="email" class="form-control mainheading" id="mail">
                             </div>          
                             </div> 
-                            </div>
-                            </div>
-                            </div>  
-                           </div>
+                </div>
+                            
+      </div>  
+      </div>
 
             <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
             <div class="panel panel-default">      
@@ -359,5 +378,10 @@
 
 </body>
 </html>
-    
+<script type="text/javascript">
+     $(function() {
+        $(".datepickerClass").datepicker();
+        $('.ui-datepicker').addClass('notranslate');
+    });
+</script>    
     
