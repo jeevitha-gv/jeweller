@@ -41,13 +41,41 @@
  'mail':$('#mail').val(),
  'action':'create'
    	}
+    if(modelDetails.name==""||modelDetails.start_date==""||modelDetails.phonenumber==""||modelDetails.bill_number=="--select bill_number--"||modelDetails.dob==""||modelDetails.address==""||modelDetails.Weight==""||modelDetails.carat==""||modelDetails.rateofinterest==""||modelDetails.marketvalue==""||modelDetails.assessedvalue==""||modelDetails.amontadvance==""||modelDetails.monthlyinterest==""||modelDetails.signature==""||modelDetails.mail=="")
+    {
 
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {
     $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails,
         success:insertdata
-            });    
+            }).done(function (data) {
+           swal({
+              title: "Plan Created",
+              text: "Your Plan Has Been Created",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            }); 
+            // , function () {
+            //   setTimeout(function () {
+            //     window.location="/freshgrc/view/audit/auditCreateAdmin.php";
+            //   }, 2000);
+            // });
+
+ 
+    });
+     
+    }   
 }
 
 
@@ -61,13 +89,34 @@ function interest()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
  			'action':'paid'
-}
+              }
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {        
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-   window.print();
+            }).done(function (data) {
+           swal({
+              title: "Paid Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+   // window.print();
+   }  
 }
 
 function renewalinterest()
@@ -79,13 +128,35 @@ function renewalinterest()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
  			'action':'renewal'
-}
+                      }
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-window.print();
+            }).done(function (data) {
+           swal({
+              title: "Successfully Renewed",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+// window.print();
+    }
+
 }
 
 
@@ -100,13 +171,36 @@ function closethepawan()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
       'action':'close'
-}
+                        }
+       if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {               
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-window.print();
+            }).done(function (data) {
+           swal({
+              title: "Closed Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+// window.print();
+
+     }  
+
 }
 
 
@@ -284,10 +378,10 @@ var totalint=rate*timeDifferenceInDays;
        
  $('#totalinterest').val(totalint);
        }
-        function updaterenewal()
-        {
+function updaterenewal()
+{
           
-           var modelDetails={
+      var modelDetails={
       'phonenumber':$('#phonenumber').val(),
       'bill_number':$('#billdata').val(),
       'start_date':$('#renewal').val(),
@@ -295,11 +389,33 @@ var totalint=rate*timeDifferenceInDays;
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
       'action':'updaterenewal'
-}
+                      }
+                        
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.datatoasign==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else 
+    {              
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-   window.print();
-        }
+            }).done(function (data) {
+           swal({
+              title: "Updated Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+   // window.print();
+  }
+}
