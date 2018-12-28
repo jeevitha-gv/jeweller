@@ -159,12 +159,26 @@ $pClosed = $manger->getdata();
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
+   <div class="row" style="margin-left: 254px !important;">
+      <div class="clearfix" style="float: left;">   
+              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+    </div>
+     <div class="clearfix" style="float: left;">   
+              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+    </div> 
+    </div>                   
 </body>
 
 
   
     <body >
-       <div class="page-content-wrapper">
+       <div class="page-content-wrapper" style="margin-top: -70px;">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
                   
