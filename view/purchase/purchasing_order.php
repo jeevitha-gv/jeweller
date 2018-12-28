@@ -49,19 +49,28 @@
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-    <div class="page-content-wrapper" >      <!-- BEGIN CONTENT BODY -->
+    <div class="row" style="margin-left: 271px !important;">
+    <div class="clearfix" style="float: left;">   
+              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+    </div>
+     <div class="clearfix" style="float: left;">   
+              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+    </div> 
+    </div>                      
+    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >
         <div class="col-md-12">
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Pawn Ledger</div></div>      
             <div class="portlet-body">
-             <div class="panel-body">
-             <div style="padding-left: 16px; padding-top: 5px;">    
-
-             <!--  <div class="row" style="margin-left: 12px;margin-right: 12px;">
-                 -->
-
+             <div class="panel-body">                                                    
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
@@ -86,7 +95,7 @@
                             </div>          
                             </div>
                          </div>
-              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
 
                        
                              <!-- <div class="col-md-12" > -->
@@ -111,7 +120,7 @@
                             </div>
 
 
-                              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+                              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
 
                             <div class="col-md-4">
                             <div class="form-group">
@@ -130,7 +139,44 @@
                             </div>  
                            </div>
 
- <div class="panel panel-default">      
+            <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
+            <div class="panel panel-default">      
+            <div class="panel-body">
+                  <div class="form-group">  
+                     <form name="add_name" id="add_name">  
+                          <div class="table-responsive">  
+                               <table id="dynamic_field" align="center">  
+                                <tr><td>Item</td><td>Quantity</td></tr>
+                                    <tr>  
+                                          <td><select  name="item[]" class="form-control name_list" style="width: 209px;">
+                                            <option value="Bangle">Bangle</option>
+                                            <option value="Ring">Ring</option>
+                                            <option value="chain">chain</option>
+                                            <option value="Bracelet">Bracelet</option>
+                                            <option value="Watch">Watch</option>
+                                            <option value="ear ring">ear ring</option>
+                                            <option value="Anklets">Anklets</option>
+                                          </select></td> 
+                                          <td><input type="text" name="quantity[]" placeholder="Enter your Quantity" class="form-control name_list" /></td> 
+                                          <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
+                                          <input type="hidden" name="billnumber" placeholder="Enter your number" class="form-control name_list" id='formbillnumber' />
+
+                                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                                    </tr>  
+                               </table> <br>
+                               <div align="center" class="form-group">
+                               <label>Weight</label> 
+                                <input type="number" class="form-control mainheading" style="width:197px"  id="Weight" >
+                              </div>
+                          </div>  
+                     </form>  
+                  </div>
+                    
+            </div>
+            </div>  
+            </div>                      
+
+ <!-- <div class="panel panel-default">      
                 <div class="panel-body">
  <div class="form-group">  
                      <form name="add_name" id="add_name">  
@@ -162,10 +208,10 @@
                      </form>  
                 </div>
               </div>
-            </div>
+            </div> -->
 
 
-            <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top:10px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
@@ -189,7 +235,7 @@
                             </div>          
                             </div>
                          </div>
-              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
 
                        
                              <!-- <div class="col-md-12" > -->
@@ -211,7 +257,7 @@
                                 <input type="text" class="form-control mainheading" id="monthlyinterest" readonly>
                             </div>          
                             </div>
-                              <div class="col-md-4">
+                              <div class="col-md-4" style="margin-top: 10px;">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Signature</label><br>
                                 <input type="text" class="form-control mainheading" id="signature">
@@ -247,7 +293,7 @@
                     <li>Credit cards or direct payments will not be accepted for payment of interest of redemption</li>
                     </ol>
                     <p>I hearby pawn and handover to Samy & Sons the above mentioned gold article owned by me. I declare that the above particular are true and correct to the best of my knowledge and belief and agree for terms and conditions and started below.</p>
-                    <div class='row'>
+                    <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4'>
                       <label>--------------------------------------------</label><br>
                       <label style="margin-left:50px">Pawnee's Signature</label>
@@ -277,7 +323,7 @@
                   <h3 align="center">REDEMPTION OF PAWN ARTICLES</h1>
                   <p> The articles pawned by this ticket per details above having received I/we hereby discharge Amy &Sons Pawn Broker from all obligation and liabilities in respect of the pawn.
                     </p>
-                     <div class='row'>
+                     <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4 col-sm-4'>
                       <label>--------------------------------------------</label><br>
                       <label style="margin-left:50px">Pawnee's Signature</label>

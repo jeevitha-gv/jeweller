@@ -23,7 +23,7 @@
                             <ul class="sub-menu">
 
                                 <?php if($_SESSION['user_role']=='purchase_update'){ ?>
-                                 <li class="nav-item  ">
+                                 <!-- <li class="nav-item  ">
                                     <a href="view/interest/interest.php" class="nav-link ">
                                         <span class="title">Interest</span>
                                     </a>
@@ -42,7 +42,7 @@
                                     <a href="view/Notice/notice.php" class="nav-link ">
                                         <span class="title">Notice</span>
                                     </a>
-                                </li>
+                                </li> -->
                                  <li class="nav-item  ">
                                     <a href="view/purchase/bookedlist.php" class="nav-link ">
                                         <span class="title">PawnList</span>
