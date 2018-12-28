@@ -183,7 +183,7 @@ $pClosed = $manger->getdata();
             <table id="modaldetails" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                 <thead >
                     <tr>
-                      <th>Id</th>
+                      <th style="display:none">Id</th>
                         <th>Bill Number</th>
                         <th>Name</th>
                         <th>Phone Number</th> 
@@ -197,7 +197,7 @@ $pClosed = $manger->getdata();
                   <tbody>
                    <?php foreach ($pClosed as $dat) { ?>
                     <tr>
-                      <td><?php echo $dat['id']; ?></td>
+                      <td style="display:none"><?php echo $dat['id']; ?></td>
                        <td><?php echo $dat['bill_number']; ?></td>
                       <td><?php echo $dat['name']; ?></td>
                       <td><?php echo $dat['phonenumber']; ?></td>
