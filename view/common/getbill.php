@@ -6,7 +6,7 @@ $getdata=$manager->getbilldata($phonenumber);
 ?>
 
 <div class="form-group">
-        <label  class="control-label">Bill Numeber
+        <label  class="control-label">Bill Number
            </label>
 
 <select class="form-control"  onchange="getinterestamount()" id="billdata">

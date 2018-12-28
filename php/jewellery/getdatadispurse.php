@@ -157,6 +157,13 @@ function updaterenewaldate($eventData)
         $dbOps = new DBOperations();        
         return $dbOps->cudData($sql, 'ssss', $paramArray); 
 }
+public function getDataForInterest($id)
+{
+   $sql="SELECT i.phonenumber,i.billnumber,i.startdate,i.enddate,d.monthlyinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.id=29";
+    $dbOps = new DBOperations();
+        $paramArray = array($id);
+        return $dbOps->fetchData($sql, 'i', $paramArray); 
+}
 
 }
     ?>

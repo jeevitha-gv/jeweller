@@ -113,7 +113,7 @@
                             </div>  
                             <div class="col-md-4">
                             <div class="form-group">
-                                <label for="SecurityRecommendations">Date</label><br>
+                                <label for="SecurityRecommendations">On Date</label><br>
                                 <input type="date" class="form-control mainheading" id="date">
                             </div>          
                             </div> 
@@ -156,6 +156,8 @@
                                             <option value="Watch">Watch</option>
                                             <option value="ear ring">ear ring</option>
                                             <option value="Anklets">Anklets</option>
+                                            <option value="Asorted">Asorted</option>
+
                                           </select></td> 
                                           <td><input type="text" name="quantity[]" placeholder="Enter your Quantity" class="form-control name_list" /></td> 
                                           <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
@@ -165,7 +167,7 @@
                                     </tr>  
                                </table> <br>
                                <div align="center" class="form-group">
-                               <label>Weight</label> 
+                               <label>Weight in grams</label> 
                                 <input type="number" class="form-control mainheading" style="width:197px"  id="Weight" >
                               </div>
                           </div>  
@@ -292,7 +294,10 @@
                     <li>If an extension to redemption period is required, A writen request for such extension must be made be made at least fifteen days prior to the actual date of redemption</li>
                     <li>Credit cards or direct payments will not be accepted for payment of interest of redemption</li>
                     </ol>
-                    <p>I hearby pawn and handover to Samy & Sons the above mentioned gold article owned by me. I declare that the above particular are true and correct to the best of my knowledge and belief and agree for terms and conditions and started below.</p>
+                    <p>I hearby pawn and handover to Samy & Sons the above mentioned gold article owned by me. I declare that the above particular are true and correct to the best of my knowledge and belief and agree for terms and conditions and started below.</p><br>
+                    <p>நகை மீளப்பெறும் தருணத்தில் 24 மணித்தியாலங்களுக்கு முன்பாக அறியத்தருவதோடு நகையை அடைவு வைத்தவரே மீளப்பெற வர வேண்டும். அதோடு மூலப்பிரதியை கண்டிப்பாக கொண்டு வர வேண்டும் தவறின் சட்டத்தரணியூடாக சத்யகடன்னாசி முடித்தே திரும்ப பெறவேண்டும். பணம் செலுத்தும்போது காசாகவே செலுத்தவேண்டும்.<br>
+                      எனக்குச் சொந்தமான  மேற்குறிப்பிட்ட தங்க பொருட்களை சாமீ ஆன் சன்ஸ் அடைவு நிறுவனத்தில் அடைவு வைத்திருக்கின்றேன் மேற்குறிப்பிட்ட விவரங்கள் உண்மையானவை என 
+                      உறுதிப்படுத்துவதுடன் மேலே உள்ள நிபந்தனைகளுக்கு, விதிகளுக்கும் இணங்குகின்றேன். எக்காரணம் கொன்றும் அடைவு நிறுவனத்தில் அடைவு வைக்கப்பட்ட எனது நகைகள் 365 நாட்களுக்கு மேல் இருக்கமாட்டாது என்பதை அறிவதோடு வட்டி பணத்தை மதம் மதம் கட்டவேணும், கட்ட தவறின் 3 மாதத்திற்கு ஒரு முறை கண்டிப்பாக கட்டவேணும் என்பதையும் நன்கு அறிவேன்</p>
                     <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4'>
                       <label>--------------------------------------------</label><br>
@@ -322,6 +327,8 @@
 
                   <h3 align="center">REDEMPTION OF PAWN ARTICLES</h1>
                   <p> The articles pawned by this ticket per details above having received I/we hereby discharge Amy &Sons Pawn Broker from all obligation and liabilities in respect of the pawn.
+                    <br/>
+                      இச்சீட்டின் மூலம் அடைவு நகைகள்  அனைத்தையும் பெற்றுக்கொண்டதுடன் குறித்த அடைவு தொடர்பாக சாமீ அன்ட் சன்ஸ் பவுண் ப்ரோகேற்கும் எண்களுக்கும் எதுவித தொடர்பும் இல்லை என்பதை இத்தால் உறுதிப்படுத்துகின்றேன்
                     </p>
                      <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4 col-sm-4'>
