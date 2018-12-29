@@ -141,10 +141,7 @@ function googleTranslateElementInit() {
                             <!-- BEGIN USER LOGIN DROPDOWN -->
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                      
-                            <li class="dropdown dropdown-user dropdown-dark">
-                                <div id="google_translate_element"></div>
-
-                            </li>
+                            
                             
                               <li style="margin-top: 1%;" title="Log Out">
                                       <a onclick="logout()" style="padding-top: 26px; color:#ddd; font-size: 18px;" >

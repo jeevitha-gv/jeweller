@@ -6,6 +6,7 @@ $billnumber=$_POST['billdata'];
 $mail = new PHPMailer();
 
 $mail->isSMTP();
+$mail->CharSet="utf-8";
 $mail->Host = "smtp.sendgrid.net";
 $mail->SMTPSecure = "tls";
 $mail->Port = 587;

@@ -1,5 +1,5 @@
     <?php  
- $connect = mysqli_connect("localhost", "root", "root", "jewellery");  
+require_once __DIR__.'/../common/config.php';
  error_log('true'.print_r($_POST['number'],true));
  $number = count($_POST["item"]);  
  if($number > 0)  
@@ -14,7 +14,7 @@
            	 $billnumber=$_POST["billnumber"];
 
                 $sql = "INSERT INTO `pawndata`(`item`,`quantity`,`number`,`billnumber`) VALUES('$item','$quantity','$number','$billnumber')";  
-                mysqli_query($connect, $sql);  
+                mysqli_query($link, $sql);  
            }  
       }  
       echo "Data Inserted";  

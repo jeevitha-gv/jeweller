@@ -41,13 +41,41 @@
  'mail':$('#mail').val(),
  'action':'create'
    	}
+    if(modelDetails.name==""||modelDetails.start_date==""||modelDetails.phonenumber==""||modelDetails.bill_number=="--select bill_number--"||modelDetails.dob==""||modelDetails.address==""||modelDetails.Weight==""||modelDetails.carat==""||modelDetails.rateofinterest==""||modelDetails.marketvalue==""||modelDetails.assessedvalue==""||modelDetails.amontadvance==""||modelDetails.monthlyinterest==""||modelDetails.signature==""||modelDetails.mail=="")
+    {
 
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {
     $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails,
         success:insertdata
-            });    
+            }).done(function (data) {
+           swal({
+              title: "Plan Created",
+              text: "Your Plan Has Been Created",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });
+            // , function () {
+            //   setTimeout(function () {
+            //     window.location="/freshgrc/view/audit/auditCreateAdmin.php";
+            //   }, 2000);
+            // });
+
+ 
+    });
+      window.print(); 
+    }   
 }
 
 
@@ -61,13 +89,34 @@ function interest()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
  			'action':'paid'
-}
+              }
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {        
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
+            }).done(function (data) {
+           swal({
+              title: "Paid Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
    window.print();
+   }  
 }
 
 function renewalinterest()
@@ -79,13 +128,35 @@ function renewalinterest()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
  			'action':'renewal'
-}
+                      }
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-window.print();
+            }).done(function (data) {
+           swal({
+              title: "Successfully Renewed",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+ window.print();
+    }
+
 }
 
 
@@ -100,13 +171,36 @@ function closethepawan()
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
       'action':'close'
-}
+                        }
+       if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else
+    {               
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-window.print();
+            }).done(function (data) {
+           swal({
+              title: "Closed Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+ window.print();
+
+     }  
+
 }
 
 
@@ -208,16 +302,23 @@ function getinterestamount(){
 
 
 
- $(document).ready(function(){  
+ $(document).ready(function(){ 
+
+     $(function() {
+        $(".datepickerClass").datepicker();
+        $('.ui-datepicker').addClass('notranslate');
+    });     
+     
       var i=1;  
       $('#add').click(function(){  
            i++;  
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><select  name="item[]" class="form-control name_list"><option value="Bangle">Bangle</option><option value="Ring">Ring</option><option value="chain">chain</option><option value="Bracelet">Bracelet</option><option value="Watch">Watch</option><option value="ear ring">ear ring</option><option value="Anklets">Anklets</option></select></td><td><input type="text" name="quantity[]" placeholder="Enter your quantity" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><select  name="item[]" class="form-control name_list"><option value="Bangle">Bangle</option><option value="Ring">Ring</option><option value="chain">chain</option><option value="Bracelet">Bracelet</option><option value="Watch">Watch</option><option value="ear ring">ear ring</option><option value="Anklets">Anklets</option><option value="Asorted">Asorted</option></select></td><td><input type="text" name="quantity[]" placeholder="Enter your quantity" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
       });  
       $(document).on('click', '.btn_remove', function(){  
            var button_id = $(this).attr("id");   
            $('#row'+button_id+'').remove();  
-      });  
+      });
+
        });
              
              function insertdata()
@@ -284,10 +385,10 @@ var totalint=rate*timeDifferenceInDays;
        
  $('#totalinterest').val(totalint);
        }
-        function updaterenewal()
-        {
+function updaterenewal()
+{
           
-           var modelDetails={
+      var modelDetails={
       'phonenumber':$('#phonenumber').val(),
       'bill_number':$('#billdata').val(),
       'start_date':$('#renewal').val(),
@@ -295,11 +396,33 @@ var totalint=rate*timeDifferenceInDays;
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
       'action':'updaterenewal'
-}
+                      }
+                        
+    if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.datatoasign==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
+    {
+
+        swal({ 
+           title:  'Please fill all the form fields',
+           type: 'warning',
+           confirmButtonColor: '#3085d6',
+           confirmButtonText:'ok'
+        });
+    }
+    else 
+    {              
    $.ajax({
         type: "POST",
         url: "/Jeweller/php/jewellery/managedispurse.php",
         data: modelDetails
-            });
-   window.print();
-        }
+            }).done(function (data) {
+           swal({
+              title: "Updated Successfully",
+              text: "",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            });              
+    });
+    window.print();
+  }
+}

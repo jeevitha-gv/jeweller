@@ -49,7 +49,24 @@
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-    <div class="page-content-wrapper" >      <!-- BEGIN CONTENT BODY -->
+                    <div class="row" style="margin-left: 271px !important;">
+    <div class="clearfix" style="float: left;">   
+              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+    </div>
+     <div class="clearfix" style="float: left;">   
+              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+    </div> 
+    <div class="clearfix" style="float: left;">   
+              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+    </div>
+    </div>  
+    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >
         <div class="col-md-12">
           <div class="portlet box green">
@@ -82,7 +99,7 @@
                             </div> 
                          </div>
        
-                            </div>
+                            </div><br>
                            
                                 <div class="row" style="margin-left: 14px;margin-right: 14px;">
            

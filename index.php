@@ -1,7 +1,5 @@
 <?php
 include "php/common/config.php";
-            // header("Location:view/purchase/purchasing_order.php");
-
 
 if (isset($_POST['submit'])){
     $email = $_POST['Email'];
@@ -22,6 +20,7 @@ if (isset($_POST['sign_in'])){
     {
             header("Location:pawndashboard.php");
     }
+
   }
 // require_once __DIR__.'/php/dataonboading.php';
 // require __DIR__.'/php/user/userManager.php';

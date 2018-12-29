@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css"/>
     <link href="metronic/theme/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
     <link href="metronic/theme/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
     <script src="metronic/theme/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
     <script src="metronic/theme/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>     
     <script src="assets/multiselectDropdown/bootstrap-multiselect.js" type="text/javascript"></script>  
@@ -49,19 +50,31 @@
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-    <div class="page-content-wrapper" >      <!-- BEGIN CONTENT BODY -->
+    <div class="row" style="margin-left: 271px !important;">
+    <div class="clearfix" style="float: left;">   
+              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+    </div>
+     <div class="clearfix" style="float: left;">   
+              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+    </div>
+    <div class="clearfix" style="float: left;">   
+              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+    </div>  
+    </div>                      
+    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >
         <div class="col-md-12">
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Pawn Ledger</div></div>      
             <div class="portlet-body">
-             <div class="panel-body">
-             <div style="padding-left: 16px; padding-top: 5px;">    
-
-             <!--  <div class="row" style="margin-left: 12px;margin-right: 12px;">
-                 -->
-
+             <div class="panel-body">                                                    
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
@@ -86,32 +99,50 @@
                             </div>          
                             </div>
                          </div>
-              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
 
                        
                              <!-- <div class="col-md-12" > -->
-                              <div class="col-md-4">
+                            <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Driving License</label><br>
                                 <input type="text" class="form-control mainheading" id="driving_license">
                             </div>          
                             </div> 
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Date Of Birth</label><br>
                                 <input type="Date" class="form-control mainheading" id="dob">
                             </div>          
-                            </div>  
-                            <div class="col-md-4">
+                            </div> -->
+                        <div class="col-md-4" >
+                        <div class="form-group" style="margin-top: -2px;">
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Date Of Birth</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
+                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="">
+                        </div>
+                        </div>
+                        </div>
+                         <div class="col-md-4" >
+                        <div class="form-group" style="margin-top: -2px;">
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">On Date</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="">
+                        </div>
+                        </div>
+                        </div>
+              </div>
+
+                            <!-- <div class="col-md-4">
                             <div class="form-group">
-                                <label for="SecurityRecommendations">Date</label><br>
+                                <label for="SecurityRecommendations">On Date</label><br>
                                 <input type="date" class="form-control mainheading" id="date">
                             </div>          
                             </div> 
-                            </div>
+                            </div> -->
 
 
-                              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 20px;">
 
                             <div class="col-md-4">
                             <div class="form-group">
@@ -119,18 +150,57 @@
                                 <input type="text" class="form-control mainheading" id="address">
                             </div>          
                             </div> 
-                               <div class="col-md-4">
+                            <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Email Id</label><br>
                                 <input type="email" class="form-control mainheading" id="mail">
                             </div>          
                             </div> 
-                            </div>
-                            </div>
-                            </div>  
-                           </div>
+                </div>
+                            
+      </div>  
+      </div>
 
- <div class="panel panel-default">      
+            <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
+            <div class="panel panel-default">      
+            <div class="panel-body">
+                  <div class="form-group">  
+                     <form name="add_name" id="add_name">  
+                          <div class="table-responsive">  
+                               <table id="dynamic_field" align="center">  
+                                <tr><td>Item</td><td>Quantity</td></tr>
+                                    <tr>  
+                                          <td><select  name="item[]" class="form-control name_list" style="width: 209px;">
+                                            <option value="Bangle">Bangle</option>
+                                            <option value="Ring">Ring</option>
+                                            <option value="chain">chain</option>
+                                            <option value="Bracelet">Bracelet</option>
+                                            <option value="Watch">Watch</option>
+                                            <option value="ear ring">ear ring</option>
+                                            <option value="Anklets">Anklets</option>
+                                            <option value="Asorted">Asorted</option>
+
+                                          </select></td> 
+                                          <td><input type="text" name="quantity[]" placeholder="Enter your Quantity" class="form-control name_list" /></td> 
+                                          <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
+                                          <input type="hidden" name="billnumber" placeholder="Enter your number" class="form-control name_list" id='formbillnumber' />
+
+                                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                                    </tr>  
+                               </table> <br>
+                               <div align="center" class="form-group">
+                               <label>Weight in grams</label> 
+                                <input type="number" class="form-control mainheading" style="width:197px"  id="Weight" >
+                              </div>
+                          </div>  
+                     </form>  
+                  </div>
+                    
+            </div>
+            </div>  
+            </div>                      
+
+ <!-- <div class="panel panel-default">      
                 <div class="panel-body">
  <div class="form-group">  
                      <form name="add_name" id="add_name">  
@@ -162,10 +232,10 @@
                      </form>  
                 </div>
               </div>
-            </div>
+            </div> -->
 
 
-            <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top:10px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
@@ -189,7 +259,7 @@
                             </div>          
                             </div>
                          </div>
-              <div class="row" style="margin-left: 14px;margin-right: 14px;">
+              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
 
                        
                              <!-- <div class="col-md-12" > -->
@@ -211,7 +281,7 @@
                                 <input type="text" class="form-control mainheading" id="monthlyinterest" readonly>
                             </div>          
                             </div>
-                              <div class="col-md-4">
+                              <div class="col-md-4" style="margin-top: 10px;">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Signature</label><br>
                                 <input type="text" class="form-control mainheading" id="signature">
@@ -246,8 +316,11 @@
                     <li>If an extension to redemption period is required, A writen request for such extension must be made be made at least fifteen days prior to the actual date of redemption</li>
                     <li>Credit cards or direct payments will not be accepted for payment of interest of redemption</li>
                     </ol>
-                    <p>I hearby pawn and handover to Samy & Sons the above mentioned gold article owned by me. I declare that the above particular are true and correct to the best of my knowledge and belief and agree for terms and conditions and started below.</p>
-                    <div class='row'>
+                    <p>I hearby pawn and handover to Samy & Sons the above mentioned gold article owned by me. I declare that the above particular are true and correct to the best of my knowledge and belief and agree for terms and conditions and started below.</p><br>
+                    <p>நகை மீளப்பெறும் தருணத்தில் 24 மணித்தியாலங்களுக்கு முன்பாக அறியத்தருவதோடு நகையை அடைவு வைத்தவரே மீளப்பெற வர வேண்டும். அதோடு மூலப்பிரதியை கண்டிப்பாக கொண்டு வர வேண்டும் தவறின் சட்டத்தரணியூடாக சத்யகடன்னாசி முடித்தே திரும்ப பெறவேண்டும். பணம் செலுத்தும்போது காசாகவே செலுத்தவேண்டும்.<br>
+                      எனக்குச் சொந்தமான  மேற்குறிப்பிட்ட தங்க பொருட்களை சாமீ ஆன் சன்ஸ் அடைவு நிறுவனத்தில் அடைவு வைத்திருக்கின்றேன் மேற்குறிப்பிட்ட விவரங்கள் உண்மையானவை என 
+                      உறுதிப்படுத்துவதுடன் மேலே உள்ள நிபந்தனைகளுக்கு, விதிகளுக்கும் இணங்குகின்றேன். எக்காரணம் கொன்றும் அடைவு நிறுவனத்தில் அடைவு வைக்கப்பட்ட எனது நகைகள் 365 நாட்களுக்கு மேல் இருக்கமாட்டாது என்பதை அறிவதோடு வட்டி பணத்தை மதம் மதம் கட்டவேணும், கட்ட தவறின் 3 மாதத்திற்கு ஒரு முறை கண்டிப்பாக கட்டவேணும் என்பதையும் நன்கு அறிவேன்</p>
+                    <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4'>
                       <label>--------------------------------------------</label><br>
                       <label style="margin-left:50px">Pawnee's Signature</label>
@@ -276,8 +349,10 @@
 
                   <h3 align="center">REDEMPTION OF PAWN ARTICLES</h1>
                   <p> The articles pawned by this ticket per details above having received I/we hereby discharge Amy &Sons Pawn Broker from all obligation and liabilities in respect of the pawn.
+                    <br/>
+                      இச்சீட்டின் மூலம் அடைவு நகைகள்  அனைத்தையும் பெற்றுக்கொண்டதுடன் குறித்த அடைவு தொடர்பாக சாமீ அன்ட் சன்ஸ் பவுண் ப்ரோகேற்கும் எண்களுக்கும் எதுவித தொடர்பும் இல்லை என்பதை இத்தால் உறுதிப்படுத்துகின்றேன்
                     </p>
-                     <div class='row'>
+                     <div class='row' style="margin-top: 50px;">
                      <div class='col-md-4 col-sm-4'>
                       <label>--------------------------------------------</label><br>
                       <label style="margin-left:50px">Pawnee's Signature</label>
@@ -306,5 +381,3 @@
 
 </body>
 </html>
-    
-    
