@@ -4,12 +4,24 @@ include "php/common/config.php";
 
 
 if (isset($_POST['submit'])){
+    $email = $_POST['Email'];
+    $password = $_POST['Password'];
+    if($email=='admin@gmail.com')
+    {
+            header("Location:superAdmin.php");
+    }
+    // else{
+    //   header("Location:index.php")
+    // }
+  }
+
+if (isset($_POST['sign_in'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
-    // if($email=='pawan@gmail.co')
-    // {
-            // header("Location:view/purchase/purchasing_order.php");
-    // }
+    if($email=='pawn@gmail.com')
+    {
+            header("Location:pawndashboard.php");
+    }
   }
 // require_once __DIR__.'/php/dataonboading.php';
 // require __DIR__.'/php/user/userManager.php';
@@ -140,7 +152,7 @@ input[type=submit] {
       <img src="SS2.png">
     </div> -->
     <div class="col-md-6 " style="float: right;margin-top: 20px;margin-left: 30%;">
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+      <form action="index.php" method="POST">
         <div>
           <h1>User Login</h1>
         </div>
@@ -162,8 +174,9 @@ input[type=submit] {
     </div>
     <div class="row">
       <a href="">Forget Password</a>
-      <input type="submit" value="Sign In" class="btn btn-primary" name="submit" style="margin-left: 250px;">
-    </div>
+      <a href="pawndashboard.php">
+      <input type="submit" value="Sign In" class="btn btn-primary" name="sign_in" style="margin-left: 250px;">
+    </a></div>
      <div>
           <h1>Admin Login</h1>
         </div>
