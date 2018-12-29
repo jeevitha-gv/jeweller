@@ -1,15 +1,26 @@
 <?php
 include "php/common/config.php";
-            header("Location:view/purchase/bookedlist.php");
-
 
 if (isset($_POST['submit'])){
+    $email = $_POST['Email'];
+    $password = $_POST['Password'];
+    if($email=='admin@gmail.com')
+    {
+            header("Location:superAdmin.php");
+    }
+    // else{
+    //   header("Location:index.php")
+    // }
+  }
+
+if (isset($_POST['sign_in'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
-    // if($email=='pawan@gmail.co')
-    // {
-            header("Location:view/purchase/bookedlist.php");
-    // }
+    if($email=='pawn@gmail.com')
+    {
+            header("Location:pawndashboard.php");
+    }
+
   }
 // require_once __DIR__.'/php/dataonboading.php';
 // require __DIR__.'/php/user/userManager.php';
@@ -72,7 +83,7 @@ if (isset($_POST['submit'])){
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contract O</title>
+  <title>Jeweller</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -82,39 +93,117 @@ if (isset($_POST['submit'])){
   <!--<script src="js/user.js"></script>-->
   <base href="contractO">
 </head>
-<body>
-  <div class="row">
-  
-  <!-- <div class="col-md-6 container" style="float: right;">
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+}
 
-    <div>
-        <table>
-          <tr>
-            <td>Name</td>
-            <td><input type="text" class="form-control" id="name"></td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td><input type="text" class="form-control" id="mail_id"></td>
-          </tr><tr>
-            <td>Password</td>
-            <td><input type="password" class="form-control" id="password"></td>
-          </tr><tr>
-            <td>Phone Number</td>
-            <td><input type="text" class="form-control" id="number"></td>
-          </tr><tr>
-            <td>Company</td>
-            <td><input type="text" class="form-control" id="company"></td>
-          </tr>
-          <tr>
-            <td colspan="2"><button class="btn btn-primary" style="float:right;" onclick="signup()">Sign Up</button></td>
-          </tr>
-        </table>
+input[type=text],[type=password]{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  /*background-color: #4CAF50;*/
+  /*color: white;*/
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /*float: right;*/
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+/*.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+/*@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}*/
+</style>
+<body>
+ 
+  <div class="row">
+    <!-- <div class="col-md-6">
+      <img src="SS2.png">
+    </div> -->
+    <div class="col-md-6 " style="float: right;margin-top: 20px;margin-left: 30%;">
+      <form action="index.php" method="POST">
+        <div>
+          <h1>User Login</h1>
+        </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="fname">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mail_id" name="email">
+      </div>
     </div>
-   
-    <div> -->
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-        <table>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="password" name="password">
+      </div>
+    </div>
+    <div class="row">
+      <a href="">Forget Password</a>
+      <a href="pawndashboard.php">
+      <input type="submit" value="Sign In" class="btn btn-primary" name="sign_in" style="margin-left: 250px;">
+    </a></div>
+     <div>
+          <h1>Admin Login</h1>
+        </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="fname">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="Email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="lname" name="Password">
+      </div>
+    </div>
+    <div class="row">
+      <a href="">Forget Password</a>
+      <input type="submit" value="Sign In" class="btn btn-primary" name="submit" style="margin-left: 250px;">
+    </div>
+      <!--   <table style="border: 1px solid black;">
+          <tr>
+            <th><h3 style="color: red;border: 1px solid black;">User Login</h3></th>
+            <th></th>
+          </tr>
           <tr>
             <td>Email</td>
             <td><input type="text" class="form-control" name="mail_id"></td>
@@ -126,11 +215,27 @@ if (isset($_POST['submit'])){
             <td><a href="">Forget Password</a></td>
             <td><input type="submit" value="Sign In" class="btn btn-primary" name="submit" style="float:right;"></td>
           </tr>
-        </table>
+        </table> -->
+         <!-- <table>
+          <tr>
+            <th><h3>Admin Login</h3></th>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" class="form-control" name="mail_id"></td>
+          </tr><tr>
+            <td>Password</td>
+            <td><input type="password" class="form-control" name="password"></td>
+          </tr>
+          <tr>
+            <td><a href="">Forget Password</a></td>
+            <td><input type="submit" value="Sign In" class="btn btn-primary" name="submit" style="float:right;"></td>
+          </tr>
+        </table> -->
       </form>
     </div>
-  </div>
-</div>
+   </div>
+  
 
 </body>
 </html>
