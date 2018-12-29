@@ -65,7 +65,7 @@
               type: "success",
               closeOnConfirm: false,
               showLoaderOnConfirm: true
-            }); 
+            });
             // , function () {
             //   setTimeout(function () {
             //     window.location="/freshgrc/view/audit/auditCreateAdmin.php";
@@ -74,7 +74,7 @@
 
  
     });
-     
+      window.print(); 
     }   
 }
 
@@ -115,7 +115,7 @@ function interest()
               showLoaderOnConfirm: true
             });              
     });
-   // window.print();
+   window.print();
    }  
 }
 
@@ -154,7 +154,7 @@ function renewalinterest()
               showLoaderOnConfirm: true
             });              
     });
-// window.print();
+ window.print();
     }
 
 }
@@ -197,7 +197,7 @@ function closethepawan()
               showLoaderOnConfirm: true
             });              
     });
-// window.print();
+ window.print();
 
      }  
 
@@ -308,7 +308,6 @@ function getinterestamount(){
         $(".datepickerClass").datepicker();
         $('.ui-datepicker').addClass('notranslate');
     });     
-
      
       var i=1;  
       $('#add').click(function(){  
@@ -424,6 +423,6 @@ function updaterenewal()
               showLoaderOnConfirm: true
             });              
     });
-   // window.print();
+    window.print();
   }
 }
