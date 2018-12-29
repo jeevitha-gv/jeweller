@@ -172,6 +172,9 @@ $pClosed = $manger->getdata();
       <div class="clearfix" style="float: left;">   
               <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
     </div> 
+    <div class="clearfix" style="float: left;">   
+              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+    </div>
     </div>                   
 </body>
 
