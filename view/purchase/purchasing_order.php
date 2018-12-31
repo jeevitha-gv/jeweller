@@ -17,7 +17,6 @@
     <link href="metronic/theme/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
     <script src="metronic/theme/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
     <script src="metronic/theme/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>     
-    <script src="assets/multiselectDropdown/bootstrap-multiselect.js" type="text/javascript"></script>  
     <link rel="stylesheet" type="text/css" href="assets/multiselectDropdown/bootstrap-multiselect.css">
     <script src="metronic/theme/assets/global/scripts/app.min.js" type="text/javascript"></script>
     <script src="metronic/theme/assets/pages/scripts/components-select2.min.js" type="text/javascript"></script>

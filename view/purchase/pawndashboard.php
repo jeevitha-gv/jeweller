@@ -138,7 +138,7 @@
   <body style="font-family: sans-serif !important;">
       <body> 
             <?php
-     $_SESSION['user_role']='purchase_update';
+     $_SESSION['user_role']='admin';
               include "../siteHeader.php";
               include "../common/leftMenu.php"; ?>
         <div class="page-content-wrapper">          

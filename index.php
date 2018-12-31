@@ -1,4 +1,5 @@
 <?php
+session_destroy();
 include "php/common/config.php";
 
 if (isset($_POST['submit'])){
@@ -6,7 +7,7 @@ if (isset($_POST['submit'])){
     $password = $_POST['Password'];
     if($email=='admin@gmail.com'&& $password=='admin123')
     {
-            header("Location:superAdmin.php");
+            header("Location:view/superadmindata.php");
     }
     // else{
     //   header("Location:index.php")
@@ -18,7 +19,8 @@ if (isset($_POST['sign_in'])){
     $password = $_POST['password'];
     if($email=='user@gmail.com'&& $password=='user123')
     {
-            header("Location:/Jeweller/view/purchase/pawndashboard.php");
+
+            header("Location:/Jeweller/view/purchase/bookedlist.php");
     }
 
   }

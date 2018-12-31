@@ -106,19 +106,19 @@ $showdata=$manger ->showdata($billnumber);
                               <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Phone Number</label><br>
-                                <input type="number" class="form-control mainheading" value="<?php echo $showdata[0]['phonenumber'] ?>" id="phonenumber" onchange="getbilldata()">
+                                <input type="number" class="form-control mainheading" value="<?php echo $showdata[0]['phonenumber'] ?>" id="phonenumber" onchange="getbilldata()" readonly>
                             </div>          
                             </div> 
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Bill Number</label><br>
-                                <input type="number" value="<?php echo $showdata[0]['bill_number'] ?>" class="form-control mainheading" id="billdata">
+                                <input type="number" value="<?php echo $showdata[0]['bill_number'] ?>" class="form-control mainheading" id="billdata" readonly>
                             </div>          
                             </div>
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Interest Amount</label><br>
-                                <input type="number" value="<?php echo $showdata[0]['monthlyinterest'] ?>" class="form-control mainheading" id="interestrate">
+                                <input type="number" value="<?php echo $showdata[0]['monthlyinterest'] ?>" class="form-control mainheading" id="interestrate" readonly>
                             </div>          
                             </div>
 
@@ -132,19 +132,19 @@ $showdata=$manger ->showdata($billnumber);
                               <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Date</label><br>
-                                <input type="text" value="<?php echo $showdata[0]['start_date'] ?>" class="form-control mainheading" id="renewal">
+                                <input type="text" value="<?php echo $showdata[0]['start_date'] ?>" class="form-control mainheading" id="renewal" readonly>
                             </div>          
                             </div> 
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Interest Date</label><br>
-                                <input type="text" value="<?php echo $showdata[0]['enddate'] ?>" id="end_date">
+                                <input type="text" value="<?php echo $showdata[0]['enddate'] ?>" id="end_date" >
                             </div>          
                             </div>
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Total Interest</label><br>
-                                <input type="text" value="<?php echo $showdata[0]['totalinterest'] ?>" class="form-control mainheading" id="totalinterest">
+                                <input type="text"  class="form-control mainheading" id="totalinterest" readonly onclick="intamountforecho()">
                             </div>          
                             </div>
 

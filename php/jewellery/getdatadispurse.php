@@ -174,21 +174,21 @@ public function paidcalculation($id)
 }
 public function showdata($billnumber)
 {
-  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.enddate,TIMESTAMPDIFF(MONTH,d.start_date, i.enddate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.enddate)/ 30) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
+  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.enddate,TIMESTAMPDIFF(MONTH,d.start_date, i.enddate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.enddate)) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
     $dbOps = new DBOperations();
     $paramArray = array($billnumber);
     return $dbOps->fetchData($sql, 'i', $paramArray); 
 }
 public function showdatarenewal($billnumber)
 {
-  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)/ 30) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
+  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
     $dbOps = new DBOperations();
     $paramArray = array($billnumber);
     return $dbOps->fetchData($sql, 'i', $paramArray); 
 }
 public function showdataclose($billnumber)
 {
-  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)/ 30) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
+  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
     $dbOps = new DBOperations();
     $paramArray = array($billnumber);
     return $dbOps->fetchData($sql, 'i', $paramArray); 
@@ -207,7 +207,25 @@ $sql="SELECT count('rateofinterest') as count,rateofinterest,name FROM `dispurse
         return $dbOps->fetchData($sql);
 
       }
+public function getdataforsuperadmin()
+{
+   $sql="SELECT * FROM `superAdmin`";
+        $dbOps = new DBOperations();    
+        return $dbOps->fetchData($sql);
+}
 
+public function updatasuperadmin($eventData)
+{
+  $sql="UPDATE `superAdmin` SET `userFileName` = ? ,`name`=?,`number`=?,`address`=? where id=1;";
+        $paramArray = array( 
+        $eventData->userFileName,
+        $eventData->name,
+       $eventData->number,
+       $eventData->address
+       );        
+        $dbOps = new DBOperations();        
+        return $dbOps->cudData($sql, 'ssss', $paramArray); 
+}
 
 }
     ?>

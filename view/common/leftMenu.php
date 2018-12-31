@@ -7,9 +7,7 @@
                 <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                <div class="page-sidebar navbar-collapse collapse" style="margin-left: 6px;width: 174px;">
 
-                   
-
- <?php if($_SESSION['user_role']=='purchase_update' ){ ?>
+                  <?php if($_SESSION['user_role']=='admin'){ ?>
                     <ul class="page-sidebar-menu" data-keep-expanded="true" data-auto-scroll="false" data-slide-speed="200">
 
                        <!--  <li class="heading">
@@ -22,33 +20,69 @@
                             </a>
                             <ul class="sub-menu">
 
-                                <?php if($_SESSION['user_role']=='purchase_update'){ ?>
-                                 <!-- <li class="nav-item  ">
-                                    <a href="view/interest/interest.php" class="nav-link ">
-                                        <span class="title">Interest</span>
+                               
+                                <li class="nav-item">
+                                    <a href="view/purchase/pawndashboard.php" class="nav-link ">
+                                        <span class="title">Dashboard</span>
                                     </a>
                                 </li>
-                                 <li class="nav-item  ">
-                                    <a href="view/renewal/renewal.php" class="nav-link ">
-                                        <span class="title">Renewal</span>
+                                 <li class="nav-item">
+                                    <a href="view/superadmindata.php" class="nav-link ">
+                                        <span class="title">SuperAdmin</span>
                                     </a>
                                 </li>
-                                 <li class="nav-item  ">
-                                    <a href="view/close/closepawan.php" class="nav-link ">
-                                        <span class="title">Close</span>
-                                    </a>
-                                </li>
-                                 <li class="nav-item  ">
-                                    <a href="view/Notice/notice.php" class="nav-link ">
-                                        <span class="title">Notice</span>
-                                    </a>
-                                </li> -->
-                                 <li class="nav-item  ">
+                                 <li class="nav-item">
                                     <a href="view/purchase/bookedlist.php" class="nav-link ">
                                         <span class="title">PawnList</span>
                                     </a>
                                 </li>
                                 
+
+
+
+
+                                <?php  }?>
+                            </ul>
+                        </li>
+                        
+                    </ul>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <?php if($_SESSION['user_role']=='purchase_update'){ ?>
+                    <ul class="page-sidebar-menu" data-keep-expanded="true" data-auto-scroll="false" data-slide-speed="200">
+
+                      
+                        <li class="nav-item active " id="compliancedash"  >
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <span class="title">Disburse</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <?php if($_SESSION['user_role']=='purchase_update'){ ?>
+                                
+                                
+                                 <li class="nav-item">
+                                    <a href="view/purchase/bookedlist.php" class="nav-link ">
+                                        <span class="title">PawnList</span>
+                                    </a>
+                                </li>
+                                
+
+
+
+
                                 <?php } }?>
                             </ul>
                         </li>

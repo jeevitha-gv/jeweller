@@ -76,14 +76,14 @@ input[type=submit] {
 </head>
 <body>
   <?php
-     $_SESSION['user_role']='purchase_update';
+     $_SESSION['user_role']='admin';
                     include "siteHeader.php";
                     include "common/leftMenu.php"; ?>
                     <div class="page-content-wrapper" style="width:1076px;height:1076px;margin-left:200px;margin-top:10px;">      <!-- BEGIN CONTENT BODY -->
      <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Super Admin</div></div>      
-            <div class="portlet-body" style="height: 479px;">
+            <div class="portlet-body" style="height: 550px;">
              <div class="panel-body">
   <div class="row" align="center">
     <div class="col-md-6 " style="margin-top: 30px;" >

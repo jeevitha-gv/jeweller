@@ -22,8 +22,8 @@
    function createdispurse()
    {
 
-   	var modelDetails={
-   		'name':$('#name').val(),
+    var modelDetails={
+      'name':$('#name').val(),
  'start_date':$('#date').val(),
  'phonenumber':$('#phonenumber').val(),
  'bill_number':$('#bill_number').val(),
@@ -40,7 +40,7 @@
  'signature':$('#signature').val(),
  'mail':$('#mail').val(),
  'action':'create'
-   	}
+    }
     if(modelDetails.name==""||modelDetails.start_date==""||modelDetails.phonenumber==""||modelDetails.bill_number=="--select bill_number--"||modelDetails.dob==""||modelDetails.address==""||modelDetails.Weight==""||modelDetails.carat==""||modelDetails.rateofinterest==""||modelDetails.marketvalue==""||modelDetails.assessedvalue==""||modelDetails.amontadvance==""||modelDetails.monthlyinterest==""||modelDetails.signature==""||modelDetails.mail=="")
     {
 
@@ -82,13 +82,13 @@
 
 function interest()
 {
-	   	var modelDetails={
-	   	'phonenumber':$('#phonenumber').val(),
- 			'bill_number':$('#billdata').val(),
+      var modelDetails={
+      'phonenumber':$('#phonenumber').val(),
+      'bill_number':$('#billdata').val(),
       'start_date':$('#renewal').val(),
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
- 			'action':'paid'
+      'action':'paid'
               }
     if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
     {
@@ -121,13 +121,13 @@ function interest()
 
 function renewalinterest()
 {
-	     var modelDetails={
+       var modelDetails={
       'phonenumber':$('#phonenumber').val(),
       'bill_number':$('#billdata').val(),
       'start_date':$('#renewal').val(),
       'end_date':$('#end_date').val(),
       'totalinterest':$('#totalinterest').val(),
- 			'action':'renewal'
+      'action':'renewal'
                       }
     if(modelDetails.phonenumber==""||modelDetails.bill_number=="--Select bill_number--"||modelDetails.start_date==""||modelDetails.end_date==""||modelDetails.totalinterest=="")
     {
@@ -307,9 +307,6 @@ function getinterestamount(){
      $(function() {
         $(".datepickerClass").datepicker();
         $('.ui-datepicker').addClass('notranslate');
-        $('.datepicker').datetimepicker({
-       format: 'DD-MM-YYYY HH:mm:ss'
-     });
     });     
      
       var i=1;  
@@ -358,33 +355,150 @@ function sendmailnotice()
        function totalinterestdata()
        {
 debugger
-
-
-
-
     var date1 =$('#renewal').val();
     var date2 = $('#end_date').val();
-date1 = date1.split('-');
+date1 = date1.split('/');
 date2 = date2.split('/');
-date1 = new Date(date1[0], date1[1], date1[2]);
-date2 = new Date(date2[2], date2[1], date2[0]);
+date1 = new Date(date1[2], date1[0], date1[1]);
+date2 = new Date(date2[2], date2[0], date2[1]);
 
     var startdate = new Date(date1);
     var enddate = new Date(date2);
 
     enddate.setDate(enddate.getDate() - startdate.getDate());
     var rate=$('#interestrate').val();
+if(date2>date1)
+    {
  $('#totalinterest').val(rate*monthDiff(startdate,enddate));
+}
+else
+{
+alert('Enter correct end date');
+}
 
 
 function monthDiff(d1, d2) {
     var months;
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
-    months -= d1.getMonth() + 1;
+    months = d1.getMonth() + 1;
     months += d2.getMonth();
     return months <= 0 ? 0 : months;
 }
+}
 
+
+
+   function totalrenewaldata()
+       {
+debugger
+
+
+
+
+    var date1 =$('#renewal').val();
+    var date2 = $('#end_date').val();
+date1 = date1.split('/');
+date2 = date2.split('-');
+date1 = new Date(date1[1], date1[0], date1[2]);
+date2 = new Date(date2[0], date2[1], date2[2]);
+
+    var startdate = new Date(date1);
+    var enddate = new Date(date2);
+
+    enddate.setDate(enddate.getDate() - startdate.getDate());
+    var rate=$('#interestrate').val();
+if(date2>date1)
+    {
+ $('#totalinterest').val(rate*monthDiff(startdate,enddate));
+}
+else
+{
+alert('Enter correct renewal date');
+}
+
+
+function monthDiff(d1, d2) {
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months = d1.getMonth() + 1;
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+}
+}
+
+
+
+function totalclosingdata()
+       {
+debugger
+   
+    var date1 =$('#renewal').val();
+    var date2 = $('#end_date').val();
+date1 = date1.split('-');
+date2 = date2.split('/');
+date1 = new Date(date1[0], date1[1], date1[2]);
+date2 = new Date(date2[2], date2[0], date2[1]);
+
+
+    var startdate = new Date(date1);
+    var enddate = new Date(date2);
+
+    enddate.setDate(enddate.getDate() - startdate.getDate());
+    var rate=$('#interestrate').val();
+    if(date2>date1)
+    {
+ $('#totalinterest').val(rate*monthDiff(startdate,enddate));
+}
+else
+{
+alert('Enter correct close date');
+}
+
+function monthDiff(d1, d2) {
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months = d1.getMonth() + 1;
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+}
+}
+
+
+
+
+function intamountforecho()
+       {
+debugger
+   
+      var date1 =$('#renewal').val();
+    var date2 = $('#end_date').val();
+date1 = date1.split('/');
+date2 = date2.split('/');
+date1 = new Date(date1[2], date1[0], date1[1]);
+date2 = new Date(date2[2], date2[0], date2[1]);
+
+    var startdate = new Date(date1);
+    var enddate = new Date(date2);
+
+    enddate.setDate(enddate.getDate() - startdate.getDate());
+    var rate=$('#interestrate').val();
+    if(date2>date1)
+    {
+ $('#totalinterest').val(rate*monthDiff(startdate,enddate));
+}
+else
+{
+alert('Enter correct close date');
+}
+
+function monthDiff(d1, d2) {
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months = d1.getMonth() + 1;
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+}
+}
 
 //         // Here are the two dates to compare
 // var date1 = $('#renewal').val();
@@ -414,7 +528,7 @@ function monthDiff(d1, d2) {
 // var totalint=rate*timeDifferenceInDays;
        
 //  $('#totalinterest').val(totalint);
-       }
+       
 function updaterenewal()
 {
           

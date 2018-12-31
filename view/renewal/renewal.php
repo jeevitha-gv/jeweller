@@ -145,7 +145,7 @@ $showdata=$manger ->showdatarenewal($billnumber);
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Total Interest</label><br>                                
-                                <input type="number" class="form-control mainheading" id="totalinterest" value="<?php echo $showdata[0]['totalinterest']; ?>" onclick="totalinterestdata()">
+                                <input type="number" class="form-control mainheading" id="totalinterest" value="<?php echo round($showdata[0]['totalinterest']); ?>" onclick="totalinterestdata()">
                             </div>          
                             </div>
                             </div>
@@ -203,7 +203,7 @@ $showdata=$manger ->showdatarenewal($billnumber);
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Total Interest</label><br>
-                                <input type="number" class="form-control mainheading" id="totalinterest" onclick="totalinterestdata()">
+                                <input type="text" class="form-control mainheading" id="totalinterest" onclick="totalrenewaldata()">
                             </div>          
                             </div>
                             </div>

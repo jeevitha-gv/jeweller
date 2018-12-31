@@ -1,14 +1,39 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Jeweller</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <base href="/Jeweller/">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <base href="contractO">
-</head>
+
+  <link href="assets/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+    <link href="assets/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+    <link href="assets/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+    <link href="assets/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+    <link href="assets/img/favicon.png" rel="icon" type="image/png">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <link href="metronic/theme/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="metronic/theme/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="metronic/theme/assets/global/css/components-rounded.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="metronic/theme/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="metronic/theme/assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronic/theme/assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="metronic/theme/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/lib/font-awesome/font-awesome.min.css">  
+<script type="text/javascript" src="js/jewellery/dashboard.js"></script>
 <style type="text/css">
   * {
   box-sizing: border-box;
@@ -44,19 +69,38 @@ input[type=submit] {
   margin-top: 6px;
 }
 </style>
+</head>
 <body>
-  <div class="row">
-    <div class="col-md-6 " style="float: right;margin-top: 20px;margin-left: 30%;">
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-        <div>
-          <h1>Super Admin</h1>
-        </div>
-        <div class="row">
-      <div class="col-25">
-        <label for="fname">Name</label>
+  <?php
+
+     $_SESSION['user_role']='admin';
+                    include "view/siteHeader.php";
+                    include "view/common/leftMenu.php"; ?>
+                    <div class="page-content-wrapper" style="width:1076px;height:1076px;margin-left:200px;margin-top:10px;">      <!-- BEGIN CONTENT BODY -->
+     <div class="portlet box green">
+            <div class="portlet-title">
+              <div class="caption">Super Admin</div></div>      
+            <div class="portlet-body" style="height: 479px;">
+             <div class="panel-body">
+  <div class="row" align="center">
+    <div class="col-md-6 " style="margin-top: 30px;" >
+        
+         <div class="row">
+        <div class="col-25">
+           <label for="fname">Logo</label>
       </div>
       <div class="col-75">
-        <input type="text" id="mail_id" name="email">
+
+<input type="file" id="import" onchange="fileUpload()">
+<input type="text" id="userFileName">
+      </div>
+    </div>
+        <div class="row">
+        <div class="col-25">
+           <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name">
       </div>
     </div>
     <div class="row">
@@ -64,18 +108,27 @@ input[type=submit] {
         <label for="lname">Phone Number</label>
       </div>
       <div class="col-75">
-        <input type="password" id="password" name="password">
+        <input type="number" id="number"  style="width:199px; height:45px" >
       </div>
     </div>
-    <div class="row">
-      <a href="">Forget Password</a>
-      <input type="submit" value="Sign In" class="btn btn-primary" name="submit" style="margin-left: 250px;">
+ <div class="row">
+      <div class="col-25">
+        <label for="lname">Address</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="address">
+      </div>
     </div>
-      </form>
+   
+    <div class="row">
+      <button  class="btn btn-primary" name="submit" style="margin-left: 250px;color:white;" onclick="update()">Update</button>
     </div>
    </div>
-  
-
+  </div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
 
