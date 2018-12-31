@@ -74,9 +74,10 @@
       <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
     </div>
-    <!-- <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
-    </div> -->  
+    <div class="clearfix" style="float: left;">   
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
+    </div>
+ 
     </div>     
           <div class="portlet box green">
             <div class="portlet-title">

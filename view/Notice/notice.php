@@ -148,8 +148,11 @@ $pClosed = $manger->getdata();
             display: none !important;
 
        }
+
+  
+</style>
      
-    </style>
+    
 </head>
 
 
@@ -172,19 +175,19 @@ $pClosed = $manger->getdata();
                         <div class="col-md-12">
                           <div class="row" style="margin-left:5px; margin-bottom:10px;">
       <div class="clearfix" style="float: left;">   
-              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
     </div>
      <div class="clearfix" style="float: left;">   
-              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
-    </div> 
+              <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
+    </div>
     <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
     </div>
     </div>    
                          <div class="portlet box green">
