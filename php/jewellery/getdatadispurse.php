@@ -193,6 +193,20 @@ public function showdataclose($billnumber)
     $paramArray = array($billnumber);
     return $dbOps->fetchData($sql, 'i', $paramArray); 
 }
+public function getadvanceamountdata()
+{
+$sql="SELECT count('amountadvance'),amontadvance FROM `dispurse` group BY amontadvance";
+        $dbOps = new DBOperations();    
+        return $dbOps->fetchData($sql);
+      }
+
+      public function getuserforadvanceamount()
+      {
+        $sql="SELECT count('amountadvance'),amontadvance,name FROM `dispurse` group BY amontadvance";
+        $dbOps = new DBOperations();    
+        return $dbOps->fetchData($sql);
+
+      }
 
 }
     ?>
