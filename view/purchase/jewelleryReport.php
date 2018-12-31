@@ -76,10 +76,10 @@ $count=count($paid);
               <a href="view/close/closepawan.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Close</button></a>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/Notice/notice.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Notice</button></a>        
+              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
     </div>
     <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Disburse</button></a>        
+              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
     </div> 
     </div> 
     <div class="page-content-wrapper" style="margin-top: -70px;" >      <!-- BEGIN CONTENT BODY -->

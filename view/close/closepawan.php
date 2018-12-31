@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
+$manger = new jeweller();
+$billnumber=$_GET['billnumber'];
+// echo $billnumber;
+$showdata=$manger ->showdataclose($billnumber);
+// print_r($showdata);
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -75,10 +84,78 @@
               <div class="caption">Closing</div></div>      
             <div class="portlet-body">
              <div class="panel-body">
-             <div style="padding-left: 16px; padding-top: 5px;">    
+             <div style="padding-left: 16px; padding-top: 5px;"> 
 
-                   
+             <?php if($billnumber!= NULL)
+             {?>
+                <div class="row" style="margin-left: 14px;margin-right: 14px;">
+           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                             <!-- <div class="col-md-12" > -->
+                              <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Phone Number</label><br>
+                                <input type="Number" class="form-control mainheading" id="phonenumber" value="<?php echo $showdata[0]['phonenumber']; ?>" onchange="getrenewalbillnumber()">
+                            </div>          
+                            </div> 
+                            <div class="col-md-4 col-md-4">
+                          <div  id="controlDrop">
+                                <label for="SecurityRecommendations">Bill Number</label><br>
+                                <input type="Number" class="form-control mainheading" value="<?php echo $showdata[0]['bill_number']; ?>" id="billdata">
+                               
+                            </div>          
+                            </div>  
+                            <div class="col-md-4">
+                          <div class="form-group" id="getinterest">
+                                 <label for="SecurityRecommendations">Interest Amount</label><br>
+                                 <input type="Number" class="form-control mainheading" value="<?php echo $showdata[0]['monthlyinterest']; ?>"  id="interestrate">
+                               
+                            </div>          
+                            </div> 
+                         </div>
+       
+            </div><br>
+                                       
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
+           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
+                            <div class="col-md-4">
+                          <div class="form-group" id="getdateforrenewwal">
+                               <label for="SecurityRecommendations">Date</label><br>
+                               <input type="text" class="form-control mainheading" value="<?php echo $showdata[0]['start_date']; ?>" id="renewal">
+                            </div>          
+                            </div> 
+                         
+       
+
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Close Date</label><br>                              
+                         <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="Close Date" name="from" class="" onchange="totalinterestdata()">
+                            </div>          
+                            </div>
+                             <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Total Interest</label><br>
+                                <input type="number" class="form-control mainheading"  id="totalinterest">
+                            </div>          
+                            </div> 
+                            </div>
+                           
+                            </div>
+              
+  
+
+              <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
+
+                <button type="button"  onclick="closethepawan()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Close</button>          
+                    </div> 
+              
+
+            <?php } 
+             else
+              {?>
+                  <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
@@ -100,9 +177,9 @@
                             </div> 
                          </div>
        
-                            </div><br>
+            </div><br>
                            
-                                <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
                             <div class="col-md-4">
@@ -113,7 +190,7 @@
                          
        
 
-         <div class="col-md-4">
+                          <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Close Date</label><br>
                                 <!-- <input type="date" class="form-control mainheading" id="end_date" onchange="totalinterestdata()" > -->
@@ -129,14 +206,21 @@
                             </div>          
                             </div>
                             </div>
-                           </div>
+              </div>
   
 
-                     <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
+              <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
 
                 <button type="button"  onclick="closethepawan()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Close</button>          
                     </div> 
-                </div>
+             
+
+
+             <?php }
+             ?>  
+
+                   
+           </div>
               </div>
            </div>
        </div>

@@ -179,6 +179,20 @@ public function showdata($billnumber)
     $paramArray = array($billnumber);
     return $dbOps->fetchData($sql, 'i', $paramArray); 
 }
+public function showdatarenewal($billnumber)
+{
+  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)/ 30) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
+    $dbOps = new DBOperations();
+    $paramArray = array($billnumber);
+    return $dbOps->fetchData($sql, 'i', $paramArray); 
+}
+public function showdataclose($billnumber)
+{
+  $sql="SELECT i.id,d.phonenumber,d.bill_number,d.monthlyinterest,d.start_date,i.renewaldate,TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate) AS month,(d.monthlyinterest*TIMESTAMPDIFF(MONTH,d.start_date, i.renewaldate)/ 30) AS totalinterest FROM dispurse d,interest i where d.phonenumber=i.phonenumber and d.bill_number=i.billnumber and d.bill_number=? ORDER BY i.id DESC";
+    $dbOps = new DBOperations();
+    $paramArray = array($billnumber);
+    return $dbOps->fetchData($sql, 'i', $paramArray); 
+}
 
 }
     ?>

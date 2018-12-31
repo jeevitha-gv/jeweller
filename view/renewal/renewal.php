@@ -3,8 +3,9 @@ require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
 $manger = new jeweller();
 $billnumber=$_GET['billnumber'];
 // echo $billnumber;
-$showdata=$manger ->showdata($billnumber);
+$showdata=$manger ->showdatarenewal($billnumber);
 // print_r($showdata);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,7 +87,65 @@ $showdata=$manger ->showdata($billnumber);
 
              <?php if($billnumber != NULL)
              {?>
-                echo "successs";
+                <div class="row" style="margin-left: 14px;margin-right: 14px;">           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                             <!-- <div class="col-md-12" > -->
+                              <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Phone Number</label><br>
+                                <input type="Number" class="form-control mainheading" value="<?php echo $showdata[0]['phonenumber']; ?>" id="phonenumber" onchange="getrenewalbillnumber()">
+                            </div>          
+                            </div> 
+                            <div class="col-md-4 col-md-4">
+                          <div  id="controlDrop">
+                               <label for="SecurityRecommendations">Bill Number</label><br>
+                               <input type="Number" class="form-control mainheading" value="<?php echo $showdata[0]['bill_number']; ?>" id="billdata">
+                            </div>          
+                            </div>  
+                            <div class="col-md-4">
+                          <div class="form-group" id="getinterest">
+                              <label for="SecurityRecommendations">Interest Amount</label><br>
+                              <input type="Number" class="form-control mainheading" value="<?php echo $showdata[0]['monthlyinterest']; ?>" id="interestrate">  
+                            </div>          
+                            </div> 
+                         </div>
+       
+                    </div><br>
+                           
+                    <div class="row" style="margin-left: 14px;margin-right: 14px;">
+           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
+                            <div class="col-md-4">
+                          <div class="form-group" id="getdateforrenewwal">
+                                <label for="SecurityRecommendations">Date</label><br>
+                                <input type="text" class="form-control mainheading" value="<?php echo $showdata[0]['start_date']; ?>" id="renewal">                                 
+                           </div>          
+                            </div> 
+                         
+       
+
+                          <div class="col-md-4">
+                            <div class="form-group" id="getendDateforrenewal">
+                              <label for="SecurityRecommendations">Renewal Date</label><br>
+                              <input type="text" class="form-control mainheading" value="<?php echo $showdata[0]['renewaldate']; ?>" id="date"> 
+                              
+                            </div>          
+                            </div> 
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Total Interest</label><br>                                
+                                <input type="number" class="form-control mainheading" id="totalinterest" value="<?php echo $showdata[0]['totalinterest']; ?>" onclick="totalinterestdata()">
+                            </div>          
+                            </div>
+                            </div>
+                    </div>
+  
+
+                  <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
+                       <button type="button"  onclick="updaterenewal()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Update</button>          
+
+                       <button type="button"  onclick="renewalinterest()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Renew</button>          
+                  </div> 
              <?php }
              else
              {?>
