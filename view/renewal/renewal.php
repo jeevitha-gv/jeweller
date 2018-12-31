@@ -58,9 +58,13 @@ $showdata=$manger ->showdatarenewal($billnumber);
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-                    <div class="row" style="margin-left: 271px !important;">
-     <div class="clearfix" style="float: left;">   
-             <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
+                 
+    <div class="page-content-wrapper">      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content" >
+        <div class="col-md-12">
+             <div class="row" style="margin-left: 3px; margin-bottom:10px;">
+    <div class="clearfix" style="float: left;">   
+              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
     </div>
      <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
@@ -75,9 +79,6 @@ $showdata=$manger ->showdatarenewal($billnumber);
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
     </div>  
     </div>  
-    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
-      <div class="page-content" >
-        <div class="col-md-12">
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Renewal</div></div>      

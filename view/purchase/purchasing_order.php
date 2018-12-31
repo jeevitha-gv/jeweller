@@ -50,7 +50,11 @@
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-    <div class="row" style="margin-left: 271px !important;">
+         <div>           
+    <div class="page-content-wrapper">      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content" >
+        <div class="col-md-12">
+           <div class="row" style="margin-left:3px;margin-bottom:10px;">
     <div class="clearfix" style="float: left;">   
              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
     </div>
@@ -66,18 +70,17 @@
     <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
     </div>  
-    </div>                      
-    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
-      <div class="page-content" >
-        <div class="col-md-12">
+    </div>     
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Pawn Ledger</div></div>      
             <div class="portlet-body">
-             <div class="panel-body">                                                    
+             <div class="panel-body"> 
+
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
+
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
                               <div class="col-md-4">
@@ -125,9 +128,9 @@
                         </div>
                          <div class="col-md-4" >
                         <div class="form-group" style="margin-top: -2px;">
-                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">On Date</label>
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Pawn Date</label>
                         <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
-                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="">
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="">
                         </div>
                         </div>
                         </div>
@@ -377,7 +380,7 @@
       </div>
     </div>
  </div>
-
+</div>
 
 </body>
 </html>

@@ -59,7 +59,11 @@ $showdata=$manger ->showdataclose($billnumber);
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
 
-    <div class="row" style="margin-left: 271px !important;">
+    
+    <div class="page-content-wrapper">      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content" >
+        <div class="col-md-12">
+          <div class="row" style="margin-left:3px; margin-bottom:10px;">
       <div class="clearfix" style="float: left;">   
              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
     </div>
@@ -76,9 +80,6 @@ $showdata=$manger ->showdataclose($billnumber);
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
     </div>  
     </div>  
-    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
-      <div class="page-content" >
-        <div class="col-md-12">
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Closing</div></div>      
