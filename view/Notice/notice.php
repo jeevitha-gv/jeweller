@@ -159,7 +159,18 @@ $pClosed = $manger->getdata();
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-   <div class="row" style="margin-left: 254px !important;">
+                  
+</body>
+
+
+  
+    <body >
+       <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                  
+                        <div class="col-md-12">
+                          <div class="row" style="margin-left:5px; margin-bottom:10px;">
       <div class="clearfix" style="float: left;">   
               <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
     </div>
@@ -175,18 +186,7 @@ $pClosed = $manger->getdata();
     <div class="clearfix" style="float: left;">   
               <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
     </div>
-    </div>                   
-</body>
-
-
-  
-    <body >
-       <div class="page-content-wrapper" style="margin-top: -70px;">
-                <!-- BEGIN CONTENT BODY -->
-                <div class="page-content">
-                  
-                    <div class="row">
-                        <div class="col-md-12">
+    </div>    
                          <div class="portlet box green">
                                 <div class="portlet-title">
                                     <div class="caption">Pawn List</div>

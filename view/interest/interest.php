@@ -57,7 +57,11 @@ $showdata=$manger ->showdata($billnumber);
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-    <div class="row" style="margin-left: 271px !important;">
+                   
+    <div class="page-content-wrapper"s>      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content" >
+        <div class="col-md-12">
+          <div class="row" style="margin-left:3px;margin-top:-10px;">
     <div class="clearfix" style="float: left;">   
               <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
     </div>
@@ -73,11 +77,8 @@ $showdata=$manger ->showdata($billnumber);
     <div class="clearfix" style="float: left;">   
               <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
     </div>   
-    </div>                 
-    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
-      <div class="page-content" >
-        <div class="col-md-12">
-          <div class="portlet box green">
+    </div>  
+          <div class="portlet box green" style="margin-top:10px;">
             <div class="portlet-title">
               <div class="caption">Interest</div></div>      
             <div class="portlet-body">            
@@ -125,7 +126,7 @@ $showdata=$manger ->showdata($billnumber);
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Interest Date</label><br>
-                                <input type="text" value="<?php echo $showdata[0]['enddate'] ?>" class="form-control mainheading" id="end_date">
+                                <input type="text" value="<?php echo $showdata[0]['enddate'] ?>" id="end_date">
                             </div>          
                             </div>
                             <div class="col-md-4">
