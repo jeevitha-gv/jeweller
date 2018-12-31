@@ -66,21 +66,21 @@ $count=count($paid);
 
 
                      <div class="row" style="margin-left: 271px !important;">
-    <div class="clearfix" style="float: left;">   
-              <a href="view/interest/interest.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Interest</button></a>        
+                      <div class="clearfix" style="float: left;">   
+             <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php?billnumber=<?php echo $pawndata[0]['bill_number']?>'">Interest</button>       
     </div>
      <div class="clearfix" style="float: left;">   
-              <a href="view/renewal/renewal.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Renewal</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php?billnumber=<?php echo $pawndata[0]['bill_number']?>'">Renewal</button>
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/close/closepawan.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Close</button></a>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php?billnumber=<?php echo $pawndata[0]['bill_number']?>'">Close</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
     </div>
     <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
-    </div> 
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
+    </div>      
     </div> 
     <div class="page-content-wrapper" style="margin-top: -70px;" >      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >

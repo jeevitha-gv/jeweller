@@ -57,36 +57,44 @@
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
-                    
+         <div>           
     <div class="page-content-wrapper">      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >
         <div class="col-md-12">
            <div class="row" style="margin-left:3px;margin-bottom:10px;">
     <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
+
+             <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
     </div>
      <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
     </div> 
       <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
     </div>
     <div class="clearfix" style="float: left;">   
+
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
     </div>
  
+
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
+    </div>  
+
     </div>     
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Pawn Ledger</div></div>      
             <div class="portlet-body">
-             <div class="panel-body">                                                    
+             <div class="panel-body"> 
+
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
+
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
                               <div class="col-md-4">
@@ -386,7 +394,7 @@
       </div>
     </div>
  </div>
-
+</div>
 
 </body>
 </html>

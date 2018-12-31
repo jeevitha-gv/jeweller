@@ -66,6 +66,7 @@ $showdata=$manger ->showdata($billnumber);
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
+
                    
     <div class="page-content-wrapper"s>      <!-- BEGIN CONTENT BODY -->
       <div class="page-content" >
@@ -75,6 +76,7 @@ $showdata=$manger ->showdata($billnumber);
               <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
     </div>
      <div class="clearfix" style="float: left;">   
+
               <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
@@ -87,6 +89,27 @@ $showdata=$manger ->showdata($billnumber);
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
     </div>
     
+
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
+    </div> 
+      <div class="clearfix" style="float: left;">   
+             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
+    </div>
+    <div class="clearfix" style="float: left;">   
+
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
+    </div>  
+    </div>                 
+    <div class="page-content-wrapper" style="margin-top: -70px;">      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content" >
+        <div class="col-md-12">
+          <div class="portlet box green">
+              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+    </div>   
+
     </div>  
           <div class="portlet box green" style="margin-top:10px;">
             <div class="portlet-title">

@@ -162,6 +162,7 @@ $pClosed = $manger->getdata();
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
                     include "../common/leftMenu.php"; ?>
+
                   
 </body>
 
@@ -178,6 +179,7 @@ $pClosed = $manger->getdata();
               <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
     </div>
      <div class="clearfix" style="float: left;">   
+
               <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
@@ -188,7 +190,31 @@ $pClosed = $manger->getdata();
     </div>
     <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
+
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
+    </div> 
+      <div class="clearfix" style="float: left;">   
+             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
+    </div> 
+      <div class="clearfix" style="float: left;">   
+             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
+
     </div>
+    <div class="clearfix" style="float: left;">   
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
+    </div>  
+    </div>                   
+</body>
+
+
+  
+    <body >
+       <div class="page-content-wrapper" style="margin-top: -70px;">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                  
+                    <div class="row">
+                        <div class="col-md-12">
     </div>    
                          <div class="portlet box green">
                                 <div class="portlet-title">
