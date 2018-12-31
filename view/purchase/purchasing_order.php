@@ -79,10 +79,7 @@
 
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
     </div>
- 
 
-              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
-    </div>  
 
     </div>     
           <div class="portlet box green">
