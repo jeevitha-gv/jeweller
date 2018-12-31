@@ -307,6 +307,9 @@ function getinterestamount(){
      $(function() {
         $(".datepickerClass").datepicker();
         $('.ui-datepicker').addClass('notranslate');
+        $('.datepicker').datetimepicker({
+       format: 'DD-MM-YYYY HH:mm:ss'
+     });
     });     
      
       var i=1;  
