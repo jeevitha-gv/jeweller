@@ -63,20 +63,22 @@
         <div class="col-md-12">
            <div class="row" style="margin-left:3px;margin-bottom:10px;">
     <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
+
+             <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
     </div>
      <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
     </div> 
       <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
+             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
     </div>
-    <!-- <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
-    </div> -->  
+    <div class="clearfix" style="float: left;">   
+              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
+    </div>  
+    
     </div>     
           <div class="portlet box green">
             <div class="portlet-title">
