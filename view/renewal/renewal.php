@@ -1,3 +1,11 @@
+<?php
+require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
+$manger = new jeweller();
+$billnumber=$_GET['billnumber'];
+// echo $billnumber;
+$showdata=$manger ->showdata($billnumber);
+// print_r($showdata);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -74,11 +82,16 @@
               <div class="caption">Renewal</div></div>      
             <div class="portlet-body">
              <div class="panel-body">
-             <div style="padding-left: 16px; padding-top: 5px;">    
+             <div style="padding-left: 16px; padding-top: 5px;">
 
-                   
-            <div class="row" style="margin-left: 14px;margin-right: 14px;">
-           
+             <?php if($billnumber != NULL)
+             {?>
+                echo "successs";
+             <?php }
+             else
+             {?>
+                 
+                  <div class="row" style="margin-left: 14px;margin-right: 14px;">           
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
                               <div class="col-md-4">
@@ -99,9 +112,9 @@
                             </div> 
                          </div>
        
-                            </div><br>
+                    </div><br>
                            
-                                <div class="row" style="margin-left: 14px;margin-right: 14px;">
+                    <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
                             <div class="col-md-4">
@@ -124,15 +137,20 @@
                             </div>          
                             </div>
                             </div>
-                           </div>
+                    </div>
   
 
-                     <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
-                <button type="button"  onclick="updaterenewal()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Update</button>          
+                  <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 30px;">
+                       <button type="button"  onclick="updaterenewal()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Update</button>          
 
-                <button type="button"  onclick="renewalinterest()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Renew</button>          
-                    </div> 
-                </div>
+                       <button type="button"  onclick="renewalinterest()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Renew</button>          
+                  </div> 
+             <?php }
+              ?>   
+
+
+
+                </div>                
               </div>
            </div>
        </div>
