@@ -4,7 +4,7 @@ include "php/common/config.php";
 if (isset($_POST['submit'])){
     $email = $_POST['Email'];
     $password = $_POST['Password'];
-    if($email=='admin@gmail.com')
+    if($email=='admin@gmail.com'&& $password=='admin123')
     {
             header("Location:superAdmin.php");
     }
@@ -16,9 +16,9 @@ if (isset($_POST['submit'])){
 if (isset($_POST['sign_in'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
-    if($email=='pawn@gmail.com')
+    if($email=='user@gmail.com'&& $password=='user123')
     {
-            header("Location:pawndashboard.php");
+            header("Location:/Jeweller/view/purchase/pawndashboard.php");
     }
 
   }
@@ -91,7 +91,7 @@ if (isset($_POST['sign_in'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!--<script src="js/user.js"></script>-->
-  <base href="contractO">
+  <base href="/Jeweller/">
 </head>
 <style type="text/css">
   * {
