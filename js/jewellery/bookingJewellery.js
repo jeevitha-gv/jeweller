@@ -354,36 +354,63 @@ function sendmailnotice()
 
        function totalinterestdata()
        {
+debugger
 
 
-        // Here are the two dates to compare
-var date1 = $('#renewal').val();
-var date2 = $('#end_date').val();
 
-// First we split the values to arrays date1[0] is the year, [1] the month and [2] the day
+
+    var date1 =$('#renewal').val();
+    var date2 = $('#end_date').val();
 date1 = date1.split('-');
-date2 = date2.split('-');
-
-// Now we convert the array to a Date object, which has several helpful methods
+date2 = date2.split('/');
 date1 = new Date(date1[0], date1[1], date1[2]);
-date2 = new Date(date2[0], date2[1], date2[2]);
+date2 = new Date(date2[2], date2[1], date2[0]);
 
-// We use the getTime() method and get the unixtime (in milliseconds, but we want seconds, therefore we divide it through 1000)
-date1_unixtime = parseInt(date1.getTime() / 1000);
-date2_unixtime = parseInt(date2.getTime() / 1000);
+    var startdate = new Date(date1);
+    var enddate = new Date(date2);
 
-// This is the calculated difference in seconds
-var timeDifference = date2_unixtime - date1_unixtime;
+    enddate.setDate(enddate.getDate() - startdate.getDate());
+    var rate=$('#interestrate').val();
+ $('#totalinterest').val(rate*monthDiff(startdate,enddate));
 
-// in Hours
-var timeDifferenceInHours = timeDifference / 60 / 60;
 
-// and finaly, in days :)
-var timeDifferenceInDays = timeDifferenceInHours  / 24;
-var rate=$('#interestrate').val()/30;
-var totalint=rate*timeDifferenceInDays;
+function monthDiff(d1, d2) {
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months -= d1.getMonth() + 1;
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+}
+
+
+//         // Here are the two dates to compare
+// var date1 = $('#renewal').val();
+// var date2 = $('#end_date').val();
+
+// // First we split the values to arrays date1[0] is the year, [1] the month and [2] the day
+// date1 = date1.split('-');
+// date2 = date2.split('-');
+
+// // Now we convert the array to a Date object, which has several helpful methods
+// date1 = new Date(date1[0], date1[1], date1[2]);
+// date2 = new Date(date2[2], date2[1], date2[0]);
+
+// // We use the getTime() method and get the unixtime (in milliseconds, but we want seconds, therefore we divide it through 1000)
+// date1_unixtime = parseInt(date1.getTime() / 1000);
+// date2_unixtime = parseInt(date2.getTime() / 1000);
+
+// // This is the calculated difference in seconds
+// var timeDifference = date2_unixtime - date1_unixtime;
+
+// // in Hours
+// var timeDifferenceInHours = timeDifference / 60 / 60;
+
+// // and finaly, in days :)
+// var timeDifferenceInDays = timeDifferenceInHours  / 24;
+// var rate=$('#interestrate').val()/30;
+// var totalint=rate*timeDifferenceInDays;
        
- $('#totalinterest').val(totalint);
+//  $('#totalinterest').val(totalint);
        }
 function updaterenewal()
 {

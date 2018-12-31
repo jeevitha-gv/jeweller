@@ -7,12 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Audit</title>
-    <base href="/freshgrc/">
-    <script src="https://code.highcharts.com/highcharts.js"></script> 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+
+    <base href="/Jeweller/">
+
     <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
     <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>      
@@ -22,9 +19,7 @@
 <script src="https://code.highcharts.com/modules/treemap.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-</script>
+
     <link href="assets/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
     <link href="assets/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
     <link href="assets/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
@@ -239,6 +234,16 @@
         
                  
                     </div>    
+                    <script>
+                    $(document).ready(function(){ 
+  alert('dfgdhs');
+  });
+   
+  function amountinadvance(data)
+  {
+  console.log(data);
+}
+  </script>
       </body>
     </body>
   </body>
