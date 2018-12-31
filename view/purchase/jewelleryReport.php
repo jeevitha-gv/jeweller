@@ -2,6 +2,9 @@
 require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
 $manger = new jeweller();
 $id=$_GET['id'];
+// session_start();
+// $_SESSION['id']=$id;
+// echo $_SESSION['id'];
 $pawndata = $manger->getpawndata($id);
 $nameofpawndetails=$manger->nameofpawndetails($id);
 $paid=$manger->paidcalculation($id);
@@ -64,19 +67,19 @@ $count=count($paid);
 
                      <div class="row" style="margin-left: 271px !important;">
     <div class="clearfix" style="float: left;">   
-              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+              <a href="view/interest/interest.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Interest</button></a>        
     </div>
      <div class="clearfix" style="float: left;">   
-              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+              <a href="view/renewal/renewal.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Renewal</button></a>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+              <a href="view/close/closepawan.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Close</button></a>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+              <a href="view/Notice/notice.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Notice</button></a>        
     </div>
     <div class="clearfix" style="float: left;">   
-              <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
+              <a href="view/purchase/purchasing_order.php?billnumber=<?php echo $pawndata[0]['bill_number']?>"><button type="button" class="btn btn-success">Disburse</button></a>        
     </div> 
     </div> 
     <div class="page-content-wrapper" style="margin-top: -70px;" >      <!-- BEGIN CONTENT BODY -->

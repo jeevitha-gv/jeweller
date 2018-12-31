@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__.'/../../php/jewellery/getdatadispurse.php';
+$manger = new jeweller();
+$billnumber=$_GET['billnumber'];
+$showdata=$manger ->showdata($billnumber);
+// print_r($showdata);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -73,12 +80,72 @@
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Interest</div></div>      
-            <div class="portlet-body">
+            <div class="portlet-body">            
              <div class="panel-body">
-             <div style="padding-left: 16px; padding-top: 5px;">    
+             <div style="padding-left: 16px; padding-top: 5px;"> 
+             <?php if($billnumber != NULL)
+             {
+              ?>
+                <div class="row" style="margin-left: 14px;margin-right: 14px;">
+           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                             <!-- <div class="col-md-12" > -->
+                              <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Phone Number</label><br>
+                                <input type="number" class="form-control mainheading" value="<?php echo $showdata[0]['phonenumber'] ?>" id="phonenumber" onchange="getbilldata()">
+                            </div>          
+                            </div> 
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Bill Number</label><br>
+                                <input type="number" value="<?php echo $showdata[0]['bill_number'] ?>" class="form-control mainheading" id="billdata">
+                            </div>          
+                            </div>
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Interest Amount</label><br>
+                                <input type="number" value="<?php echo $showdata[0]['monthlyinterest'] ?>" class="form-control mainheading" id="interestrate">
+                            </div>          
+                            </div>
 
-                  
+                         </div>
+       
+            </div><br>
             <div class="row" style="margin-left: 14px;margin-right: 14px;">
+           
+                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                             <!-- <div class="col-md-12" > -->
+                              <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Date</label><br>
+                                <input type="text" value="<?php echo $showdata[0]['start_date'] ?>" class="form-control mainheading" id="renewal">
+                            </div>          
+                            </div> 
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Interest Date</label><br>
+                                <input type="text" value="<?php echo $showdata[0]['enddate'] ?>" class="form-control mainheading" id="end_date">
+                            </div>          
+                            </div>
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="SecurityRecommendations">Total Interest</label><br>
+                                <input type="text" value="<?php echo $showdata[0]['totalinterest'] ?>" class="form-control mainheading" id="totalinterest">
+                            </div>          
+                            </div>
+
+                         </div>
+       
+            </div><br>
+             <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 31px;">
+
+                <button type="button"  onclick="interest()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Paid</button>          
+            </div>                 
+             <?php }
+             else
+              {?>
+                <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
@@ -100,8 +167,8 @@
                             </div> 
                          </div>
        
-                            </div><br>
-                            <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            </div><br>
+            <div class="row" style="margin-left: 14px;margin-right: 14px;">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
@@ -136,27 +203,28 @@
                            
                          </div>
        
-                            </div>
-  
-
-                     <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 118px;">
+            </div>
+            <div class="modal-footer" style="border-top: 1px solid #eef1f5;margin-top: 31px;">
 
                 <button type="button"  onclick="interest()" data-dismiss="modal" class="btn btn-primary" style="background-color:#4285f4; float:right;margin-left:15px;">Paid</button>          
-                    </div> 
-                </div>
+            </div>
+             <?php }
+            ?>
+                                                            
+               </div>
               </div>
            </div>
-       </div>
+       </div>       
       </div>
     </div>
  </div>
 </body>
 </html>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
      $(function() {
         $(".datepickerClass").datepicker();
         $('.ui-datepicker').addClass('notranslate');
     });
-</script>    
+</script>   -->  
         
     
