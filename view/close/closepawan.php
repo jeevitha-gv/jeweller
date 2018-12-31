@@ -89,24 +89,7 @@ $showdata=$manger ->showdataclose($billnumber);
     <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>        
     </div>
-
-      <div class="clearfix" style="float: left;">   
-             <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>       
-    </div>
-     <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>
-    </div> 
-      <div class="clearfix" style="float: left;">   
-             <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
-    </div> 
-      <div class="clearfix" style="float: left;">   
-             <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
-    </div>
-    <div class="clearfix" style="float: left;">   
-              <button type="button" class="btn btn-success" onclick="location.href='view/purchase/purchasing_order.php'">Disburse</button>       
-    </div>  
-
-    </div>  
+</div>  
           <div class="portlet box green">
             <div class="portlet-title">
               <div class="caption">Closing</div></div>      
