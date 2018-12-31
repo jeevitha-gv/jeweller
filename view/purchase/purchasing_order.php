@@ -41,11 +41,18 @@
         <link href="metronic/theme/assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="metronic/theme/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
    <script src="js/jewellery/bookingJewellery.js"></script>
+<style>
+  @media print
+{
+    html
+    {
+        zoom: 75%;
+    }
+}
+</style>
 </head>
 <body  style="background-color: #f0f5f5">
 
-     
-  <body>
 <?php
      $_SESSION['user_role']='purchase_update';
                     include "../siteHeader.php";
@@ -56,20 +63,20 @@
         <div class="col-md-12">
            <div class="row" style="margin-left:3px;margin-bottom:10px;">
     <div class="clearfix" style="float: left;">   
-              <a href="view/interest/interest.php"><button type="button" class="btn btn-success">Interest</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
     </div>
      <div class="clearfix" style="float: left;">   
-              <a href="view/renewal/renewal.php"><button type="button" class="btn btn-success">Renewal</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/renewal/renewal.php'">Renewal</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/close/closepawan.php"><button type="button" class="btn btn-success">Close</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/close/closepawan.php'">Close</button>        
     </div> 
       <div class="clearfix" style="float: left;">   
-              <a href="view/Notice/notice.php"><button type="button" class="btn btn-success">Notice</button></a>        
+              <button type="button" class="btn btn-success" onclick="location.href='view/Notice/notice.php'">Notice</button>        
     </div>
-    <div class="clearfix" style="float: left;">   
+    <!-- <div class="clearfix" style="float: left;">   
               <a href="view/purchase/purchasing_order.php"><button type="button" class="btn btn-success">Disburse</button></a>        
-    </div>  
+    </div> -->  
     </div>     
           <div class="portlet box green">
             <div class="portlet-title">
@@ -126,9 +133,9 @@
                         </div>
                          <div class="col-md-4" >
                         <div class="form-group" style="margin-top: -2px;">
-                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">On Date</label>
+                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Pawn Date</label>
                         <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
-                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="">
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="">
                         </div>
                         </div>
                         </div>
