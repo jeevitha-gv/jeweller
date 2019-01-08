@@ -161,7 +161,7 @@ $showdata=$manger ->showdatarenewal($billnumber);
              else
              {?>
                  
-                  <div class="row" style="margin-left: 14px;margin-right: 14px;">           
+                  <div class="row">           
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
                               <div class="col-md-4">
@@ -184,7 +184,7 @@ $showdata=$manger ->showdatarenewal($billnumber);
        
                     </div><br>
                            
-                    <div class="row" style="margin-left: 14px;margin-right: 14px;">
+                    <div class="row">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
                             <div class="col-md-4">

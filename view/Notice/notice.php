@@ -201,18 +201,18 @@ $pClosed = $manger->getdata();
           <div class="portlet-body ">
           
           
-
-            <table id="modaldetails" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+            <div class="table-responsive">
+            <table id="modaldetails" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%;">
                 <thead >
                     <tr>
                         <th style="display:none">Id</th>
-                        <th>Bill Number</th>
-                        <th>Name</th>
-                        <th>Phone Number</th> 
-                        <th>Amount</th>
-                        <th>Interest</th>
-                       <th>Status</th>
-                        <th>Action</th>
+                        <th width="10%;">Bill Number</th>
+                        <th width="20%;">Name</th>
+                        <th width="20%;">Phone Number</th> 
+                        <th width="20%;">Amount</th>
+                        <th width="10%;">Interest</th>
+                        <th width="10%;">Status</th>
+                        <th width="10%;">Action</th>
 
                     </tr>
                   </thead>
@@ -232,6 +232,7 @@ $pClosed = $manger->getdata();
                   </tbody>
                                     </table>
                                 </div>
+                              </div>
                             </div>
                        
                             </div>
