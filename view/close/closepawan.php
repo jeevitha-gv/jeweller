@@ -205,9 +205,9 @@ $showdata=$manger ->showdataclose($billnumber);
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Close Date</label><br>
                                 <!-- <input type="date" class="form-control mainheading" id="end_date" onchange="totalinterestdata()" > -->
-                                <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
-                        <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="" onchange="totalinterestdata()" style="width:299px;">
-                            </div>          
+                                <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd"></div>   
+                        <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="On Date" name="from" class="" onchange="totalinterestdata()">
+                                   
                             </div> 
                             </div>
                             <div class="col-md-4">

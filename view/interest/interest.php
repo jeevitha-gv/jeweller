@@ -202,9 +202,9 @@ $showdata=$manger ->showdata($billnumber);
                             <div class="col-md-4" >
                         <div class="form-group">
                         <label class="control-label" for="SecurityRecommendations">Interest Date</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd"></div>
                         <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="Interest Date" name="from" class="" onchange="totalinterestdata()">
-                        </div>
+                        
                         </div>
                         </div> 
                             <div class="col-md-4">

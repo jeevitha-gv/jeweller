@@ -130,22 +130,26 @@
                                 <input type="Date" class="form-control mainheading" id="dob">
                             </div>          
                             </div> -->
-                        <div class="col-md-4" >
+                        <div class="col-md-4">
                         <div class="form-group">
                         <label class="control-label"  for="SecurityRecommendations">Date Of Birth</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
-                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="" style="width: 292px;">
+                        <div class="input-group input-large date-picker input-daterange" 
+                        data-date="" data-date-format="yyyy/mm/dd"></div>
+                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="">
                         </div>
-                        </div>
-                        </div>
+                      </div>
+                        
+                        
                          <div class="col-md-4" >
                         <div class="form-group">
                         <label class="control-label" for="SecurityRecommendations">Pawn Date</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
-                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="" style="width: 292px;">
+                        <div class="input-group input-large date-picker input-daterange" data-date="" 
+                        data-date-format="yyyy/mm/dd"></div>
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="">
                         </div>
+                      </div>
                         </div>
-                        </div></div>
+                      
                       
 
                             <!-- <div class="col-md-4">
@@ -201,7 +205,7 @@
                                           <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
                                           <input type="hidden" name="billnumber" placeholder="Enter your number" class="form-control name_list" id='formbillnumber' />
 
-                                         <td class="col-md-4"><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                                         <td><button type="button" name="add" id="add" class="btn btn-success" class="col-md-4">Add More</button></td>  
                                     </tr>  
                                </table> <br>
                                <div align="center" class="form-group">
