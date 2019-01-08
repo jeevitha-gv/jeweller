@@ -196,7 +196,7 @@ $pClosed = $manger->getdata();
           <div class="portlet-body ">
           
           
-
+            <div class="table-responsive">
             <table id="modaldetails" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                 <thead >
                     <tr>
@@ -227,6 +227,7 @@ $pClosed = $manger->getdata();
                   </tbody>
                                     </table>
                                 </div>
+                              </div>
                             </div>
                        
                             </div>

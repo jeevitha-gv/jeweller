@@ -86,9 +86,9 @@
             <div class="portlet-title">
               <div class="caption">Pawn Ledger</div></div>      
             <div class="portlet-body">
-             <div class="panel-body"> 
+             <!-- <div class="panel-body">  -->
 
-            <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            
             <div class="panel panel-default">      
                 <div class="panel-body">
 
@@ -113,10 +113,11 @@
                             </div>          
                             </div>
                          </div>
-              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
+              
 
                        
                              <!-- <div class="col-md-12" > -->
+                           <div class="col-xs-12 col-md-12 col-lg-12 form-group"> 
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Driving License</label><br>
@@ -130,22 +131,22 @@
                             </div>          
                             </div> -->
                         <div class="col-md-4" >
-                        <div class="form-group" style="margin-top: -2px;">
-                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Date Of Birth</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
-                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="">
+                        <div class="form-group">
+                        <label class="control-label"  for="SecurityRecommendations">Date Of Birth</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
+                        <input type="text" id="dob" class="form-control datepickerClass  notranslate" placeholder="Date Of Birth" name="from" class="" style="width: 292px;">
                         </div>
                         </div>
                         </div>
                          <div class="col-md-4" >
-                        <div class="form-group" style="margin-top: -2px;">
-                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Pawn Date</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
-                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="">
+                        <div class="form-group">
+                        <label class="control-label" for="SecurityRecommendations">Pawn Date</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
+                        <input type="text" id="date" class="form-control datepickerClass  notranslate" placeholder="Pawn Date" name="from" class="" style="width: 292px;">
                         </div>
                         </div>
-                        </div>
-              </div>
+                        </div></div>
+                      
 
                             <!-- <div class="col-md-4">
                             <div class="form-group">
@@ -156,35 +157,36 @@
                             </div> -->
 
 
-              <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 20px;">
-
-                            <div class="col-md-4">
+              
+              <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                            <div class="col-md-6">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Address</label><br>
                                 <input type="text" class="form-control mainheading" id="address">
                             </div>          
                             </div> 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Email Id</label><br>
                                 <input type="email" class="form-control mainheading" id="mail">
                             </div>          
                             </div> 
                 </div>
-                            
-      </div>  
-      </div>
 
-            <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 10px;">
+      </div>                            
+      </div>  
+     
+
+            
             <div class="panel panel-default">      
             <div class="panel-body">
                   <div class="form-group">  
                      <form name="add_name" id="add_name">  
-                          <div class="table-responsive">  
+                          <!-- <div class="table-responsive">   -->
                                <table id="dynamic_field" align="center">  
-                                <tr><td>Item</td><td>Quantity</td></tr>
+                                <tr><td class="col-md-4">Item</td><td class="col-md-6">Quantity</td></tr>
                                     <tr>  
-                                          <td><select  name="item[]" class="form-control name_list" style="width: 209px;">
+                                          <td><select  name="item[]" class="form-control name_list">
                                             <option value="Bangle">Bangle</option>
                                             <option value="Ring">Ring</option>
                                             <option value="chain">chain</option>
@@ -199,20 +201,20 @@
                                           <input type="hidden" name="number" placeholder="Enter your number" class="form-control name_list" id='formphonenumber' /> 
                                           <input type="hidden" name="billnumber" placeholder="Enter your number" class="form-control name_list" id='formbillnumber' />
 
-                                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                                         <td class="col-md-4"><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
                                     </tr>  
                                </table> <br>
                                <div align="center" class="form-group">
                                <label>Weight in grams</label> 
                                 <input type="number" class="form-control mainheading" style="width:197px"  id="Weight" >
                               </div>
-                          </div>  
+                          <!-- </div>   -->
                      </form>  
                   </div>
                     
             </div>
             </div>  
-            </div>                      
+                               
 
  <!-- <div class="panel panel-default">      
                 <div class="panel-body">

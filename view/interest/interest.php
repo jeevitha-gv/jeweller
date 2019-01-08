@@ -158,7 +158,7 @@ $showdata=$manger ->showdata($billnumber);
              <?php }
              else
               {?>
-                <div class="row" style="margin-left: 14px;margin-right: 14px;">
+                <div class="row">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
@@ -181,7 +181,7 @@ $showdata=$manger ->showdata($billnumber);
                          </div>
        
             </div><br>
-            <div class="row" style="margin-left: 14px;margin-right: 14px;">
+            <div class="row">
            
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
                              <!-- <div class="col-md-12" > -->
@@ -200,10 +200,10 @@ $showdata=$manger ->showdata($billnumber);
                             </div>          
                             </div> -->
                             <div class="col-md-4" >
-                        <div class="form-group" style="margin-top: -2px;">
-                        <label class="control-label" style="margin-left:5px !important;" for="SecurityRecommendations">Interest Date</label>
-                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd" style="width: 330px !important; margin-left: 6px;">
-                        <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="Interest Date" name="from" class="" onchange="totalinterestdata()" style="width: 336px;">
+                        <div class="form-group">
+                        <label class="control-label" for="SecurityRecommendations">Interest Date</label>
+                        <div class="input-group input-large date-picker input-daterange" data-date="" data-date-format="yyyy/mm/dd">
+                        <input type="text" id="end_date" class="form-control datepickerClass  notranslate" placeholder="Interest Date" name="from" class="" onchange="totalinterestdata()">
                         </div>
                         </div>
                         </div> 
