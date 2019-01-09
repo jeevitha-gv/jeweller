@@ -258,8 +258,9 @@
             <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top:10px;">
             <div class="panel panel-default">      
                 <div class="panel-body">
+
                       <div class="col-xs-12 col-md-12 col-lg-12 form-group">
-                             <!-- <div class="col-md-12" > -->
+                             <div class="col-md-12" >
                               <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Carat</label><br>
@@ -279,6 +280,7 @@
                             </div>          
                             </div>
                          </div>
+                       </div>
               <div class="row" style="margin-left: 14px;margin-right: 14px;margin-top: 70px;">
 
                        
