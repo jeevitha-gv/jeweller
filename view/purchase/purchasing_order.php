@@ -49,6 +49,9 @@
         zoom: 75%;
     }
 }
+@media only screen and (min-width : 320px) {
+
+    }
 </style>
 </head>
 <body  style="background-color: #f0f5f5">
@@ -259,7 +262,7 @@
             <div class="panel panel-default">      
                 <div class="panel-body">
 
-                      <div class="col-xs-12 col-md-12 col-lg-12 form-group">
+                      <div class="form-group">
                              <div class="col-md-12" >
                               <div class="col-md-4">
                             <div class="form-group">
