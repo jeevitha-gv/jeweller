@@ -172,7 +172,7 @@ $pClosed = $manger->getdata();
                 <div class="page-content">
                   
                     <div class="col-md-12">
-                      <div class="row" style="margin-left:5px; margin-bottom:10px;">
+                      <div class="row" style="margin-left:1px; margin-bottom:10px;">
       <div class="clearfix" style="float: left;">   
               <button type="button" class="btn btn-success" onclick="location.href='view/interest/interest.php'">Interest</button>        
     </div>
