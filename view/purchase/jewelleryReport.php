@@ -199,7 +199,7 @@ $count=count($paid);
                               <div class="col-md-4">
                             <div class="form-group">
                                 <label for="SecurityRecommendations">Carat</label><br>
-                                <input type="date" class="form-control mainheading" id="carat" value="<?php echo $pawndata[0]['carat']?>" readonly>
+                                <input type="text" class="form-control mainheading" id="carat" value="<?php echo $pawndata[0]['carat']?>" readonly>
                             </div>          
                             </div> 
                             <div class="col-md-4">

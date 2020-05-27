@@ -8,11 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Jeweller</title>
     <base href="/Jeweller/">
-    <script src="https://code.highcharts.com/highcharts.js"></script> 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
     <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>      
@@ -22,9 +18,7 @@
 <script src="https://code.highcharts.com/modules/treemap.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-</script>
+
     <link href="assets/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
     <link href="assets/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
     <link href="assets/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
@@ -150,58 +144,7 @@
         <div class="page-content-wrapper">          
           <div class="page-content">
           <div id="onclickk" ondblclick="myFunction()"> 
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 blue" >
-                  <div class="visual">
-                    <i class="fa fa-file-text"></i>
-                  </div>
-           <div class="details">
-                    <div class="desc">NO OF PAWN</div>
-                    <div class="number">
-                      <span data-counter="counterup">5</span>
-                    </div>                  
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 red">
-                  <div class="visual">
-                    <i class="fa fa-upload"></i>
-                  </div>
-                  <div class="details">
-                    <div class="desc"> NO OF PAWN CLOSED </div>
-                    <div class="number">
-                      <span data-counter="counterup">3</span></div>                  
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 green" >
-                  <div class="visual">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <div class="details">
-                    <div class="desc"> DUE</div>
-                    <div class="number">                    
-                      <span data-counter="counterup">2</span>
-                    </div>                  
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 purple" >
-                  <div class="visual">
-                    <i class="fa fa-hourglass-end"></i>
-                  </div>
-                  <div class="details">
-                    <div class="desc"> DELAYED</div>
-                    <div class="number"> 
-                      <span data-counter="counterup">1</span></div>                  
-                  </div>
-                </div>
-              </div>
-            </div>
+    
             <div class="clearfix"></div>             
             <div class="row">
               <div class="col-lg-6 col-xs-12 col-sm-12">                  
@@ -209,7 +152,7 @@
                   <div class="portlet-title">
                     <div class="caption">
                       <i class="icon-bar-chart font-dark hide"></i>
-                      <span class="caption-subject font-dark bold uppercase">Pawn Status</span>   
+                      <span class="caption-subject font-dark bold uppercase">Pawn Status By Advance Amount</span>   
                     </div>                 
                   </div>
                   <div class="portlet-body">                  
@@ -223,7 +166,7 @@
                   <div class="portlet-title">
                     <div class="caption">
                       <i class="icon-share font-red-sunglo hide"></i>
-                      <span class="caption-subject font-dark bold uppercase">Status</span>         
+                      <span class="caption-subject font-dark bold uppercase">Pawn status By Interest Amount</span>         
                     </div>                 
                   </div>
                   <div class="portlet-body">                  
@@ -239,64 +182,143 @@
         </div>
         <script type="text/javascript">
           $(document).ready(function(){
-            $("#default").click();
              $.ajax({
             dataType: "json",
-            url: "php/jewellery/getinterestdata.php",
-            data: "",
-            success: interest
+            url: "php/jewellery/amountinadvance.php",
+            success:amountinadvance
+          });
+
+                 $.ajax({
+            dataType: "json",
+            url: "php/jewellery/getdatapawnstatus.php",
+            success:getdatapawnstatus
           });
           });
-          function interest(){
-             console.log(data);
+
+
+          function amountinadvance(data){
              var chartData=[];
-             for(i=0;i<data.length;i++)
-             {
-             chartData.push({"name":data[i].interestpaid,"y":parseInt(data[i].count)});
-             } 
-       Highcharts.chart('chartdiv1', {
+  seriesData=[];
+  var chartDrillData=[];
+for(i=0;i<data.length;i++){
+    chartData.push({"name":data[i].amontadvance,"y":parseInt(data[i].count),"drilldown":data[i].amontadvance});
+  }
+  for(i=0;i<data.length;i++){
+for(j=0;j<data.length;j++){
+   seriesData.push([data[j].name,1]);
+      } 
+      chartDrillData.push({"name":data[i].amontadvance,"id":data[i].amontadvance,"data":seriesData,"drilldown":data[i].amontadvance});
+  seriesData=[];
 
-  //  colors: ['#ADD8E6', '#E6ACD7', '#B2B2B2', '#D0D050', 'green', 'skyblue',
-  //   '#FF9655', '#FFF263', '#6AF9C4'
-  // ],     
-      chart: {
-         plotBackgroundColor: null,
-         plotBorderWidth: null,
-         plotShadow: false,
-         type: 'pie'   
-     },
-     credits:
-     {
-      enabled: false
-      },
+}
 
-     title: {
+    
+Highcharts.chart('chartdiv1', {
+    chart: {
+        type: 'pie'
+    },
+    credits:
+{
+  enabled: false
+},
+    title: {
         text: ''
-      },
-     
-     tooltip: {
-        pointFormat: '{name}<b>{count}</b>'
-      },
-      plotOptions: {
-        pie: {
-            size: 200,
-            allowPointSelect: false,
-            cursor: 'pointer',
+    },
+    subtitle: {
+        text: '<a href="http://statcounter.com" target="_blank"></a>'
+    },
+    plotOptions: {
+        series: {
             dataLabels: {
                 enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                style: {
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                }
+                format: '{point.name}: {point.y:.1f}%'
             }
         }
     },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
     "series": [{
         name:'name',
         colorByPoint: true,
         data:chartData,
-    }]
+        drilldown:'name'
+
+    }],
+
+    "drilldown": {
+    "series": chartDrillData,
+
+    }
 });
+            
+}
+
+
+
+ function getdatapawnstatus(data){
+  console.log(data);
+             var chartData=[];
+  seriesData=[];
+  var chartDrillData=[];
+for(i=0;i<data.length;i++){
+    chartData.push({"name":data[i].rateofinterest,"y":parseInt(data[i].count),"drilldown":data[i].rateofinterest});
+  }
+  for(i=0;i<data.length;i++){
+for(j=0;j<data.length;j++){
+   seriesData.push([data[j].name,1]);
+      } 
+      chartDrillData.push({"name":data[i].rateofinterest,"id":data[i].rateofinterest,"data":seriesData,"drilldown":data[i].rateofinterest});
+  seriesData=[];
+
+}
+
+    
+Highcharts.chart('chartdiv2', {
+    chart: {
+        type: 'pie'
+    },
+    credits:
+{
+  enabled: false
+},
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: '<a href="http://statcounter.com" target="_blank"></a>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
+    "series": [{
+        name:'name',
+        colorByPoint: true,
+        data:chartData,
+        drilldown:'name'
+
+    }],
+
+    "drilldown": {
+    "series": chartDrillData,
+
+    }
+});
+            
 }
         </script>
       </body>

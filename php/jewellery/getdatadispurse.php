@@ -195,18 +195,19 @@ public function showdataclose($billnumber)
 }
 public function getadvanceamountdata()
 {
-$sql="SELECT count('amountadvance'),amontadvance FROM `dispurse` group BY amontadvance";
+$sql="SELECT count('rateofinterest') as count,rateofinterest,name FROM `dispurse` group BY rateofinterest";
         $dbOps = new DBOperations();    
         return $dbOps->fetchData($sql);
       }
 
       public function getuserforadvanceamount()
       {
-        $sql="SELECT count('amountadvance'),amontadvance,name FROM `dispurse` group BY amontadvance";
+        $sql="SELECT count('amountadvance') as count,amontadvance,name FROM `dispurse` group BY amontadvance";
         $dbOps = new DBOperations();    
         return $dbOps->fetchData($sql);
 
       }
+
 
 }
     ?>

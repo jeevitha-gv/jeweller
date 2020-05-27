@@ -9,7 +9,6 @@ $updatadate=$manager->updatasuperadmin($eventData);
        $eventData->name = $_POST['name'];
        $eventData->number = $_POST['number']; 
        $eventData->address = $_POST['address']; 
-       error_log('fdsb'.print_r($eventData,true));
       return $eventData;
     } 
 
